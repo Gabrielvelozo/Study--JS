@@ -1,0 +1,14 @@
+1) git innit // Para iniciar el registro de las carpetas.
+2) git status // Observador el estado de los archivos.
+3) git status -s // Observar de una forma mas simplificada los estados.
+4) git add . // Agregar todos los archivos.
+git add ejemplo.txt // Elegir cual archivo desea trackear.
+git diff //
+git log // Para ver los commit
+git log --online //
+git branch // Mostrar en que rama estamos.
+git checkout  -b // Crear nueva rama.
+git merge // combinar ramas.
+** git remote add origin // Conectar al repositorio remoto.
+5) git push origin "RAMA" // Subir los archivos al repositorio remoto.
+git pull // Para traer cualquier modificación del repositorio remoto. (Error // git branch -u origin/master )
