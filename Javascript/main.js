@@ -616,7 +616,7 @@ switch(diaSemana) {
 //! Problema 2: Ingresar por teclado tres números que representan el dia, el mes y el año. Si se ingresan por teclado dia: 25, mes: 12, año: 2023. 
 //! Posteriormente mostrar en la pagina con el siguiente formato: Hoy es 25 de diciembre de 2023.
 
-let dia = parseInt(prompt('Ingrese el numero de dia:'));
+/* let dia = parseInt(prompt('Ingrese el numero de dia:'));
 let mes = parseInt(prompt('Ingrese el numero de mes: '));
 let año = parseInt(prompt('Ingrese el numero de año:'));
 document.write(`Hoy es ${dia} de `);
@@ -646,4 +646,4 @@ switch(mes){
   case 9:document.write('Diciembre');
   break;
 }
-document.write(` de ${año}`) // 80
+document.write(` de ${año}`); */

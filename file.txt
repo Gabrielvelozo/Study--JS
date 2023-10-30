@@ -9,6 +9,6 @@ git log --online //
 git branch // Mostrar en que rama estamos.
 git checkout  -b // Crear nueva rama.
 git merge // combinar ramas.
-** git remote add origin // Conectar al repositorio remoto.
-5) git push origin "RAMA" // Subir los archivos al repositorio remoto.
+** git remote add origin "RAMA" // Conectar al repositorio remoto.
+5) git push -u origin "RAMA" // Subir los archivos al repositorio remoto.
 git pull // Para traer cualquier modificación del repositorio remoto. (Error // git branch -u origin/master )
