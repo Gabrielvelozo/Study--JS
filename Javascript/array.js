@@ -42,7 +42,7 @@ document.write(`${suma}`);
  */
 //! Problema 3: Se tienen las notas del primer parcial de los alumnos de dos cursos, el curso A y B. El curso A tiene 5 alumnos y el B tiene 8 alumnos. 
 //! Realizar un programa que muestre el curso que obtuvo el mayor promedio general. Cargar por asignación las notas.
-const cursoA=[1,1,1,1,5];
+/* const cursoA=[1,1,1,1,5];
 const cursoB=[1,1,1,1,1,1,1,1];
 let qCursoA=0;
 for(let f=0; f<cursoA.length; f++){
@@ -64,4 +64,44 @@ if(promedioA > promedioB){
    }else{
     document.write(`Ambos promedios son iguales: ${promedioA} | ${promedioB}`);
    }
-} // 88
+}  */
+//! Problema 4: Cargar un arreglo con 6 elementos enteros. Verificar posteriormente si el mismo esta ordenado de menor a mayor.
+
+/* const arreglo = [];
+
+for(let f=0;f<6;f++){
+    let valor=parseInt(prompt('Ingrese un numero'));
+    arreglo.push(valor);
+}
+
+document.write(`${arreglo} <hr>`);
+let menor=true;
+for(let f=1;f<arreglo.length;f++){
+    if(arreglo[f-1]>arreglo[f]){
+        menor=false;
+        
+    } 
+}
+if(menor){
+    document.write(`Esta ordenado de menor a mayor`);
+}else{
+    document.write(`No esta ordenado de menor a mayor`);
+} */
+//! Problema 5: Se desea almacenar los sueldos de un conjunto de operarios. Cuando se ejecuta el programa se debe pedir la cantidad de sueldos a ingresar. Luego
+//! almacenar en un arreglo los N sueldos ingresados. Mostrar el contenido del arreglo, la suma de todos sus elementos y el promedio.
+
+const sueldos=[];
+let ingresar=parseInt(prompt('Ingrese la cantidad de sueldos que desea cargar al sistema:'));
+for(let f=0;f<ingresar;f++){
+    let elemento=parseInt(prompt('Ingresar el sueldo:'));
+    sueldos.push(elemento);
+}
+
+document.write(`${sueldos} <hr>`);
+let sumaSueldo=0;
+for(let f=0;f<sueldos.length;f++){
+    sumaSueldo=sumaSueldo+sueldos[f];
+}
+const promedio=sumaSueldo/sueldos.length;
+document.write(`La suma de todos los sueldos es: ${sumaSueldo} <hr>`);
+document.write(`El promedio de todos los sueldos es: ${promedio}`);
