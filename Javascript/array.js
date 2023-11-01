@@ -111,7 +111,7 @@ document.write(`El promedio de todos los sueldos es: ${promedio}`);
 //! arreglo en las mismas posiciones con el objeto de trabajar con arreglos paralelos. Ingresar posteriormente el nombre de un empleado y en el caso que exista en el
 //! arreglo de nombres proceder a mostrar su sueldo. Mostrar un mensaje si no se encuentra cargado dicho nombre.
 
-const empleados=[];
+/* const empleados=[];
 const sueldos=[];
 for(let f=0;f<4;f++){
     let nombre=prompt('Ingresar el nombre del empleado: ');
@@ -119,7 +119,7 @@ for(let f=0;f<4;f++){
     let ingreso=parseFloat(prompt('Ingresar el sueldo del empleado: $'));
     sueldos.push(ingreso);
 }
-/* document.write(`${empleados}  <hr> ${sueldos} <hr> `); */
+document.write(`${empleados}  <hr> ${sueldos} <hr> `);
 let consulta=prompt('Consulta por un empleado:');
 let bandera=false;
 
@@ -133,6 +133,89 @@ for(let f=0;f<empleados.length;f++){
 if(!bandera){
     document.write(`El empleado no esta ingresado.`);
     
-}
+} */
 
-//! Problema 2: Cargar un array de N elementos, operador decide cuantos elementos se cargaran en el array. Imprimir el menor y un mensaje si se repite dentro del array.
+//! Problema 2: Cargar un array de N elementos, operador decide cuantos elementos se cargaran. Imprimir el menor y un mensaje si se repite dentro del array.
+
+/* const valores= [];
+let ingreso=parseInt(prompt('Cuantos números desea ingresar?'));
+
+for(let f=0;f<ingreso;f++){
+    let user=parseInt(prompt('Ingrese un numero: '));
+    valores.push(user);
+}
+document.write(`${valores} <hr>`);
+
+let menor=valores[0];
+
+for(let f=1;f<valores.length;f++){
+    if(valores[f]<menor){
+        menor=valores[f];
+    }
+}
+document.write(`El menor es: ${menor}<hr>`);
+let repite=0;
+for(let f=0;f<valores.length;f++){
+    if(valores[f]==menor){
+        repite++;
+    }
+}
+if(repite > 1){
+    document.write(`El menor: ${menor} se repite`);
+} */
+
+//! Problema 3: Definir un array con cinco nombres distintos. Imprimir el menor alfabéticamente.
+
+/* const nombres=[];
+for(let f=0;f<5;f++){
+    let valor=prompt('Ingresar un nombre: ');
+    nombres.push(valor);
+}
+document.write(`${nombres}`);
+document.write(`<br>`);
+let menorA=nombres[0];
+
+for(let f=1;f<nombres.length;f++){
+    if(nombres[f]<menorA){
+        menorA=nombres[f];
+    }
+}
+document.write(`El menor alfabéticamente es : ${menorA}`);
+ */
+/* let saldos=[1290,5000,10,380,780];
+
+for(let m=0;m<saldos.length;m++){
+for(let f=0;f<saldos.length;f++){
+    if(saldos[f]>saldos[f + 1]){
+        let aux=saldos[f];
+        saldos[f]=saldos[f + 1];
+        saldos[f +1]= aux;
+    }
+}
+}
+for(let f=0;f<saldos.length;f++){
+    document.write(`${saldos[f]} - `)
+}
+ */
+//todo ALGORITMO DE ORDENAMIENTO
+//! Problema 1: Definir un array donde almacenar los nombres de 5 países. Confeccionar el algoritmo de ordenamiento alfabético. Mostrar antes y después de su ordenamiento.
+
+let countriesAmerica=['Colombia','Paraguay','Uruguay','Ecuador','Argentina'];
+
+document.write(`Antes: ${countriesAmerica} <hr>`);
+
+let countriesAfter=[];
+
+for(let f=0;f<countriesAmerica.length;f++){
+    
+for(let f=0;f<countriesAmerica.length;f++){
+    if(countriesAmerica[f]>countriesAmerica[f+1]){
+        let aux=countriesAmerica[f];
+        countriesAmerica[f]=countriesAmerica[f+1];
+        countriesAmerica[f+1]=aux;
+        
+    }
+}
+}
+document.write(`Después: ${countriesAmerica}`);
+
