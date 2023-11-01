@@ -200,7 +200,7 @@ for(let f=0;f<saldos.length;f++){
 //todo ALGORITMO DE ORDENAMIENTO
 //! Problema 1: Definir un array donde almacenar los nombres de 5 países. Confeccionar el algoritmo de ordenamiento alfabético. Mostrar antes y después de su ordenamiento.
 
-let countriesAmerica=['Colombia','Paraguay','Uruguay','Ecuador','Argentina'];
+/* let countriesAmerica=['Colombia','Paraguay','Uruguay','Ecuador','Argentina'];
 
 document.write(`Antes: ${countriesAmerica} <hr>`);
 
@@ -218,4 +218,49 @@ for(let f=0;f<countriesAmerica.length;f++){
 }
 }
 document.write(`Después: ${countriesAmerica}`);
+ */
+//! Problema 1: Se tiene  un array con los nombres de 4 clubes de futbol y otro array paralelo con los puntos obtenidos por cada club. Ordenar de menor a mayor.
+//todo ALGORITMO BURBUJA ORDENAMIENTO
+/* let clubes=['River', 'Boca','Belgrano','Talleres'];
+let puntos=[15,12,17,14];
+for(let f=0;f<clubes.length;f++){
+    document.write(`${clubes[f]} = ${puntos[f]} <br>`);
+}
+
+for(let q=0;q<clubes.length;q++){
+    for(let f=0;f<clubes.length;f++){
+        if(puntos[f]<puntos[f+1]){
+            let auxClubes=clubes[f];
+            clubes[f]=clubes[f+1];
+            clubes[f+1]=auxClubes;
+            let auxPuntos=puntos[f];
+            puntos[f]=puntos[f+1];
+            puntos[f+1]=auxPuntos;
+        }
+        
+    }
+}
+document.write(`<hr>`)
+for(let f=0;f<clubes.length;f++){
+    document.write(`${clubes[f]} = ${puntos[f]} <br>`);
+}
+ */
+//! Problema 2: Se tiene un array con componentes de tipo array. Cada componente almacena el nombre de un club y la cantidad de puntos. Ordenar de mayor a menor
+//! teniendo en cuenta los puntos del club.
+
+let clubes=[['River',15],['Boca',12],['Belgrano',17],['Talleres',14]];
+
+for(let a=0;a<clubes.length-1;a++){
+    for(let f=0;f<clubes.length-1-a;f++){
+        if(clubes[f][1]<clubes[f+1][1]){
+            let aux=clubes[f];
+            clubes[f]=clubes[f+1];
+            clubes[f+1]=aux;
+        }
+    }
+}
+for(let f=0;f<clubes.length;f++){
+    document.write(`${clubes[f][0]} - ${clubes[f][1]}<br>`);
+}
+//102
 
