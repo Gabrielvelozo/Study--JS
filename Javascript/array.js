@@ -90,7 +90,7 @@ if(menor){
 //! Problema 5: Se desea almacenar los sueldos de un conjunto de operarios. Cuando se ejecuta el programa se debe pedir la cantidad de sueldos a ingresar. Luego
 //! almacenar en un arreglo los N sueldos ingresados. Mostrar el contenido del arreglo, la suma de todos sus elementos y el promedio.
 
-const sueldos=[];
+/* const sueldos=[];
 let ingresar=parseInt(prompt('Ingrese la cantidad de sueldos que desea cargar al sistema:'));
 for(let f=0;f<ingresar;f++){
     let elemento=parseInt(prompt('Ingresar el sueldo:'));
@@ -105,3 +105,34 @@ for(let f=0;f<sueldos.length;f++){
 const promedio=sumaSueldo/sueldos.length;
 document.write(`La suma de todos los sueldos es: ${sumaSueldo} <hr>`);
 document.write(`El promedio de todos los sueldos es: ${promedio}`);
+ */
+
+//! Problema 1: Desarrollar una aplicación que permita ingresar el nombre de un empleado y su sueldo actual (Cargar los datos de 4 empleados). Almacenar cada dato en un 
+//! arreglo en las mismas posiciones con el objeto de trabajar con arreglos paralelos. Ingresar posteriormente el nombre de un empleado y en el caso que exista en el
+//! arreglo de nombres proceder a mostrar su sueldo. Mostrar un mensaje si no se encuentra cargado dicho nombre.
+
+const empleados=[];
+const sueldos=[];
+for(let f=0;f<4;f++){
+    let nombre=prompt('Ingresar el nombre del empleado: ');
+    empleados.push(nombre);
+    let ingreso=parseFloat(prompt('Ingresar el sueldo del empleado: $'));
+    sueldos.push(ingreso);
+}
+/* document.write(`${empleados}  <hr> ${sueldos} <hr> `); */
+let consulta=prompt('Consulta por un empleado:');
+let bandera=false;
+
+for(let f=0;f<empleados.length;f++){
+    if(consulta==empleados[f]){
+        document.write(`El sueldo del empleado ${empleados[f]} es: $ ${sueldos[f]}`);
+        bandera=true;
+        break;
+    } 
+}
+if(!bandera){
+    document.write(`El empleado no esta ingresado.`);
+    
+}
+
+//! Problema 2: Cargar un array de N elementos, operador decide cuantos elementos se cargaran en el array. Imprimir el menor y un mensaje si se repite dentro del array.
