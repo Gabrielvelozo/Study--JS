@@ -278,7 +278,7 @@ console.log(suma); */
 //! Problema 4: Se tiene el siguiente array: let arr1=[[100,7,85,8],[4,8,56,25],[67,89,23,1][78,56]]; Imprimir el array. Fijar con el valor cero todos los elementos + a 50
 //! del array principal. Volver a imprimir el array. Fijar con cero todos los elementos de la ultima componente del array principal.
 
-let arr1=[[100,7,85,8],[4,8,56,25],[67,89,23,1],[78,56]];
+/* let arr1=[[100,7,85,8],[4,8,56,25],[67,89,23,1],[78,56]];
 // Recorrer el array
 for(let f=0;f<arr1.length;f++){
     for(let e=0;e<arr1[f].length;e++){
@@ -312,4 +312,41 @@ for(let f=0;f<arr1.length;f++){
     }
     document.write(`<br>`);
 }
+ */
 
+//! problema : Confeccionar una aplicación para administrar los días que han faltado los 3 empleados de una empresa. Definir un array de 3 elementos de tipo string
+//! para cargar los nombres y un array paralelo para cargar los días que ha faltado cada empleado. Cada elemento del segundo array representan los días que falto cada
+//! empleado. Mostrar los empleados con la cantidad de inasistencias. Mostrar la cantidad de empleados que no han faltado.
+
+let jobs=[];
+let faults=[];
+
+for(let f=0;f<3;f++){
+    let jAux=prompt('Ingrese el nombre del empleado: ');
+    jobs.push(jAux);
+    let cFaults=parseInt(prompt('Ingrese la cantidad de inasistencias en el mes: '));
+    faults.push([]);
+    for(let r=0;r<cFaults;r++){
+        let day=parseInt(prompt('Ingrese los numero de días que falto: '));
+        faults[f].push(day);
+    }
+}
+// Recorrer el array
+/* for(let f=0;f<jobs.length;f++){
+    for(let e=0;e<jobs[f].length;e++){
+        document.write(`${jobs[f][e]} <br>`); 
+    }
+    document.write(`<br>`);
+} */
+//Imprimir nombres y días que falto el empleado
+for(let f=0;f<jobs.length;f++){
+    document.write(`${jobs[f]} : `);
+    for(let x=0;x<faults[f].length;x++){
+        document.write(`${faults[f][x]} - `);
+    }
+    document.write(`<br>`);
+}
+
+console.log(jobs);
+console.log(faults);
+// 105
