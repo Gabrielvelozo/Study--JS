@@ -248,7 +248,7 @@ for(let f=0;f<clubes.length;f++){
 //! Problema 2: Se tiene un array con componentes de tipo array. Cada componente almacena el nombre de un club y la cantidad de puntos. Ordenar de mayor a menor
 //! teniendo en cuenta los puntos del club.
 
-let clubes=[['River',15],['Boca',12],['Belgrano',17],['Talleres',14]];
+/* let clubes=[['River',15],['Boca',12],['Belgrano',17],['Talleres',14]];
 
 for(let a=0;a<clubes.length-1;a++){
     for(let f=0;f<clubes.length-1-a;f++){
@@ -261,6 +261,55 @@ for(let a=0;a<clubes.length-1;a++){
 }
 for(let f=0;f<clubes.length;f++){
     document.write(`${clubes[f][0]} - ${clubes[f][1]}<br>`);
+} */
+//! Problema 3: Crear un array por asignación. El array tiene que tener 5 elementos. Cada elemento debe ser un array el primer array tiene que tener un elemento
+//! el se segundo dos elementos, asi sucesivamente. Sumar todos los valores del array.
+
+/* let contenedor=[[1],[1,2],[1,2,3],[1,2,3,4],[1,2,3,4,5,]];
+let suma=0;
+for(let g=0;g<contenedor.length;g++){
+   for(let f=0;f<contenedor[g].length;f++){
+    suma=suma+contenedor[g][f];
+    }
 }
-//102
+
+console.log(suma); */
+
+//! Problema 4: Se tiene el siguiente array: let arr1=[[100,7,85,8],[4,8,56,25],[67,89,23,1][78,56]]; Imprimir el array. Fijar con el valor cero todos los elementos + a 50
+//! del array principal. Volver a imprimir el array. Fijar con cero todos los elementos de la ultima componente del array principal.
+
+let arr1=[[100,7,85,8],[4,8,56,25],[67,89,23,1],[78,56]];
+// Recorrer el array
+for(let f=0;f<arr1.length;f++){
+    for(let e=0;e<arr1[f].length;e++){
+        document.write(`${arr1[f][e]} `);
+    }
+    document.write(`<br>`);
+}
+document.write(`<hr>`);
+// Cambiar mayores a 50.
+for(let a=0;a<arr1[0].length;a++){
+    if(arr1[0][a]>50){
+        arr1[0][a]=0;
+    }
+}
+// Recorrer el array
+for(let f=0;f<arr1.length;f++){
+    for(let e=0;e<arr1[f].length;e++){
+        document.write(`${arr1[f][e]} `);
+    }
+    document.write(`<br>`);
+}
+document.write(`<hr>`); // separador
+
+for(let f=0;f<arr1[3].length;f++){
+    arr1[3][f]=0;
+}
+// Recorrer el array
+for(let f=0;f<arr1.length;f++){
+    for(let e=0;e<arr1[f].length;e++){
+        document.write(`${arr1[f][e]} `);
+    }
+    document.write(`<br>`);
+}
 
