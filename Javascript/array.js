@@ -318,7 +318,7 @@ for(let f=0;f<arr1.length;f++){
 //! para cargar los nombres y un array paralelo para cargar los días que ha faltado cada empleado. Cada elemento del segundo array representan los días que falto cada
 //! empleado. Mostrar los empleados con la cantidad de inasistencias. Mostrar la cantidad de empleados que no han faltado.
 
-let jobs=[];
+/* let jobs=[];
 let faults=[];
 
 for(let f=0;f<3;f++){
@@ -332,12 +332,12 @@ for(let f=0;f<3;f++){
     }
 }
 // Recorrer el array
-/* for(let f=0;f<jobs.length;f++){
+for(let f=0;f<jobs.length;f++){
     for(let e=0;e<jobs[f].length;e++){
         document.write(`${jobs[f][e]} <br>`); 
     }
     document.write(`<br>`);
-} */
+}
 //Imprimir nombres y días que falto el empleado
 for(let f=0;f<jobs.length;f++){
     document.write(`${jobs[f]} : `);
@@ -348,5 +348,44 @@ for(let f=0;f<jobs.length;f++){
 }
 
 console.log(jobs);
-console.log(faults);
-// 105
+console.log(faults); */
+
+// ! Problema : Crear y cargar por asignación un array de 4 elementos y componente también 4 elementos.
+//! Imprimir el arreglo completo la diagonal principal.
+
+/* let arrNum=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]];
+for(let x=0;x<arrNum.length;x++){
+    document.write(`${arrNum[x][x]} `);
+    console.log(`${arrNum[x][x]}`);
+} // Imprime la diagonal del array.
+document.write(`<hr>`)
+for(let f=0;f<arrNum.length;f++){
+    document.write(`${arrNum[f][arrNum.length-1-f]} `);
+} // Imprime la diagonal inversa.
+ */
+//! Problema: Crear y cargar por asignación un array de 2 elementos y cada componente un array de 4 elementos. Imprimir el arreglo completo.
+//! Intercambiar la primera componente del array principal con el segundo elemento, de tal forma que el array quede con la estructura:
+
+/* const arrNum=[[1,2,3,4],[5,6,7,8]];
+//Recorrer el array 
+for(let f=0;f<arrNum.length;f++){
+    for(let e=0;e<arrNum[f].length;e++){
+        document.write(`${arrNum[f][e]}`); 
+    }
+    document.write(`<br>`);
+}
+document.write(`<hr>`);
+// Invertir los indices del array
+let aux=arrNum[0];
+arrNum[0]=arrNum[1];
+arrNum[1]=aux;
+// Recorrer el array
+for(let f=0;f<arrNum.length;f++){
+    for(let e=0;e<arrNum[f].length;e++){
+        document.write(`${arrNum[f][e]}`); 
+    }
+    document.write(`<br>`);
+} */
+
+//! Problema : Crear un array que tenga entre 3 y 10 elementos. Luego cada elemento entre 1 y 10 elementos.
+//! Cargar valores aleatorios comprendidos entre 1 y 100 en cada componente. Imprimir todo el array. Imprimir los posiciones vertices.
