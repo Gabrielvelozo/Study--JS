@@ -357,11 +357,11 @@ console.log(faults); */
 for(let x=0;x<arrNum.length;x++){
     document.write(`${arrNum[x][x]} `);
     console.log(`${arrNum[x][x]}`);
-} // Imprime la diagonal del array.
+} //Imprime la diagonal del array.
 document.write(`<hr>`)
 for(let f=0;f<arrNum.length;f++){
     document.write(`${arrNum[f][arrNum.length-1-f]} `);
-} // Imprime la diagonal inversa.
+} //Imprime la diagonal inversa.
  */
 //! Problema: Crear y cargar por asignación un array de 2 elementos y cada componente un array de 4 elementos. Imprimir el arreglo completo.
 //! Intercambiar la primera componente del array principal con el segundo elemento, de tal forma que el array quede con la estructura:
@@ -389,3 +389,32 @@ for(let f=0;f<arrNum.length;f++){
 
 //! Problema : Crear un array que tenga entre 3 y 10 elementos. Luego cada elemento entre 1 y 10 elementos.
 //! Cargar valores aleatorios comprendidos entre 1 y 100 en cada componente. Imprimir todo el array. Imprimir los posiciones vertices.
+
+let randomArr=[];
+let rFila=Math.floor(Math.random()*8) + 3;
+for(let x=0;x<rFila;x++){
+    randomArr.push([]);
+    let num=Math.floor(Math.random()*10)+1;
+    for(let f=0;f<num;f++){
+        let valor=Math.floor(Math.random()*100) +1;
+        randomArr[x].push(valor);  
+    }
+}
+console.log(randomArr);
+// Recorrer el array
+for(let f=0;f<randomArr.length;f++){
+    for(let e=0;e<randomArr[f].length;e++){
+        document.write(`${randomArr[f][e]}  `); 
+    }
+    document.write(`<br>`);
+} 
+
+document.write(`<hr>`);
+//Imprimir los vertices.
+document.write(`${randomArr[0][0]}`);
+document.write(`<br>`);
+document.write(`${randomArr[0][randomArr[0].length-1]}`);
+document.write(`<br>`);
+document.write(`${randomArr[randomArr.length-1][0]}`)
+document.write(`<br>`);
+document.write(`${randomArr[randomArr.length-1][randomArr[randomArr.length-1].length-1]}`)
