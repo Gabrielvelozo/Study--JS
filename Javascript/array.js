@@ -422,21 +422,63 @@ document.write(`${randomArr[randomArr.length-1][randomArr[randomArr.length-1].le
 //! Problema : Crear un array por asignación con valores enteros, todos distintos. Identificar el mayor elemento del array e indicar en que posición se encuentra
 //! respecto al array principal y su posición del array anidado.
 
-const array1= [[1,2,3,5,90],[12,20,30,51,96],[100,200],[34,13]];
+/* const array1= [[1,2,3,5,90],[12,20,30,51,96],[100,200],[34,13]];
 let mayor=array1[0][0];
-let pos=array1[0][0];
+let arrayP=0
+let arrayH=0;
+
 // Recorrer el array
 for(let f=0;f<array1.length;f++){
     for(let e=0;e<array1[f].length;e++){
-        if(array1[f][e]>mayor) {
+        if(array1[f][e]>mayor) { // Ubicar el mayor en un array anidado.
             mayor=array1[f][e];
-            pos=array1[f][e]
+            arrayP=f; // Ubicar dentro de array anidado
+            arrayH=e; // Ubicar fila array anidado
         }
     }
     document.write(`<br>`);
 } 
 document.write(mayor);
-document.write(`<hr> ${pos}` )
+document.write(`<hr> ${arrayP}${arrayH}` )
+ */
 
+// Todo      -----  FOR OF -----
 
-
+//! Problema : Crear un array en el cual cada componente represente una carta de un mazo de naipes.
+const cartas=[[2,'Diamantes'],[3,'Trébol'],[4,'Picas'],[5,'Corazones'],[5,'Picas']];
+//! Imprimir las 5 cartas. Contar cuantas cartas hay de cada tipo
+//Recorrer el array
+for(cartaArray of cartas){
+    for(carta of cartaArray){
+        document.write(carta);
+    }
+    document.write('<br>')
+}
+// Contar cuantas hay de cada tipo.
+let diamante=0;
+let corazones=0;
+let trébol=0;
+let picas=0;
+for(tiposArray of cartas){
+    for(tipos of tiposArray){
+        if(tipos=='Diamantes'){
+            diamante++;
+        }else{
+            if(tipos=='Trébol'){
+                trébol++;
+            } else{
+                if(tipos=='Picas'){
+                    picas++;
+                } else{
+                    if(tipos=='Corazones'){
+                        corazones++;
+                    }
+                }
+            }
+        }
+    }
+}
+document.write(`<hr>Diamantes: ${diamante}<hr>`);
+document.write(`Corazones: ${corazones}<hr>`);
+document.write(`Trébol: ${trébol} <hr>`);
+document.write(`Picas: ${picas}`);
