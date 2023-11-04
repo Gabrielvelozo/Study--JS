@@ -390,7 +390,7 @@ for(let f=0;f<arrNum.length;f++){
 //! Problema : Crear un array que tenga entre 3 y 10 elementos. Luego cada elemento entre 1 y 10 elementos.
 //! Cargar valores aleatorios comprendidos entre 1 y 100 en cada componente. Imprimir todo el array. Imprimir los posiciones vertices.
 
-let randomArr=[];
+/* let randomArr=[];
 let rFila=Math.floor(Math.random()*8) + 3;
 for(let x=0;x<rFila;x++){
     randomArr.push([]);
@@ -418,3 +418,25 @@ document.write(`<br>`);
 document.write(`${randomArr[randomArr.length-1][0]}`)
 document.write(`<br>`);
 document.write(`${randomArr[randomArr.length-1][randomArr[randomArr.length-1].length-1]}`)
+ */
+//! Problema : Crear un array por asignación con valores enteros, todos distintos. Identificar el mayor elemento del array e indicar en que posición se encuentra
+//! respecto al array principal y su posición del array anidado.
+
+const array1= [[1,2,3,5,90],[12,20,30,51,96],[100,200],[34,13]];
+let mayor=array1[0][0];
+let pos=array1[0][0];
+// Recorrer el array
+for(let f=0;f<array1.length;f++){
+    for(let e=0;e<array1[f].length;e++){
+        if(array1[f][e]>mayor) {
+            mayor=array1[f][e];
+            pos=array1[f][e]
+        }
+    }
+    document.write(`<br>`);
+} 
+document.write(mayor);
+document.write(`<hr> ${pos}` )
+
+
+
