@@ -105,7 +105,7 @@ enteros(); */
 
 //! Confeccionar una función que muestre la tabla de multiplicar de un numero que le enviemos por parámetro. Luego llamar a dicha función para mostrar las tablas
 //! de multiplicar del 2 al 10.
-function ingresarNumero(){
+/* function ingresarNumero(){
     let user=parseInt(prompt('Ingrese un numero para saber la tabla de multiplicar: '));
     multiplicar(user);
 }
@@ -114,6 +114,125 @@ function multiplicar(valor){
     document.write(`<strong>${valor} x ${f} =</strong> ${valor*f}<br>`);
     }
 }
-ingresarNumero();
+ingresarNumero(); */
 
-//! Problema: 
+//! Problema: Definir un array vació. Elaborar tres funciones, la primera recibe la referencia del array y se procede a cargar por teclado 5 valores, la segunda
+//! recibe el array e imprime el mayor valor y la ultima recibe el array e imprime su suma.
+
+/* function cargar(arreglo){
+    for(let f=0;f<5;f++){
+        let carga=parseInt(prompt('Ingrese un valor: '));
+        arreglo.push(carga);
+    }
+}
+function mayor(arreglo){
+    let mayorValor=arreglo[0];
+    for(let f=0;f<arreglo.length;f++){
+        if(arreglo[f]>mayorValor){
+            mayorValor=arreglo[f];
+        }
+    }
+    document.write(`El valor mayor es: <strong>${mayorValor}</strong> <hr>`);
+}
+
+function sumar(arreglo){
+    let suma=0;
+    for(let f=0;f<arreglo.length;f++){
+        suma=suma+arreglo[f];
+    }
+    document.write(` La suma de lo elementos del array es: <strong>${suma}</strong>`);
+}
+let arrVacio=[];
+cargar(arrVacio);
+mayor(arrVacio);
+sumar(arrVacio); */
+
+//! Problema: Definir dos array vacíos. Elaborar una única función que cargue un vector con 5 enteros. Llamarla a la función dos veces pasando en forma sucesiva
+//! el primer y segundo array Vacio. Imprimir los dos array haciendo una única función llamándola dos veces.
+
+/* function cargar(arreglo){
+    for(let f=0;f<5;f++){
+        let user=parseInt(prompt('Ingrese un valor: '));
+        arreglo.push(user);
+    }
+}
+function impresion(texto,arreglo){
+    document.write(texto);
+    for(let f=0;f<arreglo.length;f++){
+        document.write(` ${arreglo[f]}  `);
+    }
+    document.write(`<hr>`);
+}
+
+let arr1=[];
+let arr2=[];
+cargar(arr1);
+cargar(arr2);
+impresion("ARRAY 1 :",arr1);
+impresion("ARRAY 2 :",arr2);
+ */
+//! Problema: Definir un array Vacio. Implementar las siguientes funciones: - Una función que reciba un array Vacio y almacene 50 valores aleatorios entre 0 y 1000
+//! - Otra función que reciba el array y los ordene de menor a mayor. - La ultima función que imprima el contenido del array.
+
+/* function random(arreglo){
+    for(let f=0;f<50;f++){
+        let numRandom=Math.floor(Math.random()*1001);
+        arreglo.push(numRandom);
+    }
+}
+//**** Función ordenar de menor a mayor ****  (ALGORITMO BURBUJA)
+function menorMayor(arreglo){
+    let menor=arreglo[0];
+   for(let e=0;e<arreglo.length;e++){
+    for(let f=0;f<arreglo.length;f++){
+        if(arreglo[f]>arreglo[f+1]){
+            let aux=arreglo[f];
+            arreglo[f]=arreglo[f+1];
+            arreglo[f+1]=aux;
+        }
+    }
+   }
+}
+function imprimir(texto,arreglo){
+    document.write(`${texto}<br>`);
+    for(let f=0;f<arreglo.length;f++){
+        document.write(`${arreglo[f]} - `);
+    }
+    document.write(`<hr>`);
+}
+let arr1=[];
+random(arr1);
+imprimir('Array sin ordenar: ',arr1);
+menorMayor(arr1);
+imprimir('Array ordenado: ',arr1); */
+
+//! Problema: Elaborar dos funciones: la 1. debe recibir tres números y retornar el valor promedio, la 2 debe recibir un numero y retornar su cuadrado.
+
+/* function promedio(a,b,c){
+    return (a+b+c)/3;
+}
+function cuadrado(a){
+    return a**2;
+}
+
+document.write(`El promedio es: ${promedio(2,2,2)} y el cuadrado es: ${cuadrado(9)}`);
+ */
+//! Confeccionar una función que calcule la superficie de un rectángulo y la retorne, la función recibe como parámetro los valores de su base y su altura:
+//! cargar por teclado los lados de dos rectángulos y luego mostrar un mensaje cual de ellos tiene superficie mayor.
+
+function superficieRectangulo(base,altura){
+    return base*altura;
+}
+let base1=parseInt(prompt('Ingrese la base del Rectangulo: '));
+let altura1=parseInt(prompt('Ingrese la altura del Rectangulo: '));
+let base2=parseInt(prompt('Ingrese la base del Rectangulo: '));
+let altura2=parseInt(prompt('Ingrese la altura del Rectangulo: '));
+
+let superficie1=superficieRectangulo(base1,altura1);
+let superficie2=superficieRectangulo(base2,altura2);
+
+if(superficie1>superficie2){
+    document.write(`El Rectangulo mayor es: ${superficie1}`);
+}else{
+    document.write(`El Rectangulo mayor es: ${superficie2}`);
+}
