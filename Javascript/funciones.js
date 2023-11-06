@@ -220,7 +220,7 @@ document.write(`El promedio es: ${promedio(2,2,2)} y el cuadrado es: ${cuadrado(
 //! Confeccionar una función que calcule la superficie de un rectángulo y la retorne, la función recibe como parámetro los valores de su base y su altura:
 //! cargar por teclado los lados de dos rectángulos y luego mostrar un mensaje cual de ellos tiene superficie mayor.
 
-function superficieRectangulo(base,altura){
+/* function superficieRectangulo(base,altura){
     return base*altura;
 }
 let base1=parseInt(prompt('Ingrese la base del Rectangulo: '));
@@ -235,4 +235,47 @@ if(superficie1>superficie2){
     document.write(`El Rectangulo mayor es: ${superficie1}`);
 }else{
     document.write(`El Rectangulo mayor es: ${superficie2}`);
+} */
+
+//! Plantear una función que reciba una palabra y retorne la cantidad de letras 'a' o 'A' que contiene.
+/* function letraA(valor){
+    let aA=0;
+    for(elemento of valor){
+        if(elemento=='a'||elemento=='A'){
+            aA++;
+        }
+    }
+    return aA;
+}
+
+document.write(`${letraA('Argentina')}`); */
+
+//! Confeccionar una función que nos retorne el factorial de un numero. El factorial resulta de multiplicar todos los números anteriores e igual a dicho numero.
+//! Luego invocar la función para calcular el factorial de los números desde el 2 hasta el 10.
+
+/* function calcularFactorial(valor){   // Algoritmo Factorial // 
+    let factorial=1;
+    for(let f=1;f<=valor;f++){
+        factorial=factorial*f;
+    }
+    return factorial;
+}
+document.write(`${calcularFactorial(5)}<hr>`);
+for(let f=2;f<=10;f++){
+   document.write(`${calcularFactorial(f)}<br>`) ;
+}
+ */
+
+//! Confeccionar una función que le enviemos un entero y nos retorne true si es par y false si es impar.Llamar a la función esPar 100 veces pasando los valores
+//! del 1 al 100.
+function esPar(valor){
+    if(valor%2==0){
+        return true;
+    }else{
+        return false;
+    }
+}
+for(let f=1;f<100;f++){
+    let num=Math.floor(Math.random()*101);
+    document.write(`${esPar(num)} <br>`);
 }
