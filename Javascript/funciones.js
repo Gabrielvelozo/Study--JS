@@ -65,7 +65,7 @@ minusculas('brenda desiree velardez'); */
 //! Problema : Confeccionar una función que reciba tres enteros y los muestre ordenados de menor a mayor. En otra función solicitar la carga de tres enteros por
 //! teclado y proceder a llamar a la primer función definida.
 
-function menorMayor(a,b,c){
+/* function menorMayor(a,b,c){
     if(a<b&&a<c){
         document.write(`${a} - `);
         if(b<c){
@@ -101,7 +101,19 @@ function enteros(){
     menorMayor(carga,carga2,carga3);
 }
 
-enteros();
+enteros(); */
 
 //! Confeccionar una función que muestre la tabla de multiplicar de un numero que le enviemos por parámetro. Luego llamar a dicha función para mostrar las tablas
 //! de multiplicar del 2 al 10.
+function ingresarNumero(){
+    let user=parseInt(prompt('Ingrese un numero para saber la tabla de multiplicar: '));
+    multiplicar(user);
+}
+function multiplicar(valor){
+    for(let f=1;f<=10;f++){
+    document.write(`<strong>${valor} x ${f} =</strong> ${valor*f}<br>`);
+    }
+}
+ingresarNumero();
+
+//! Problema: 
