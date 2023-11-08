@@ -279,3 +279,18 @@ for(let f=1;f<100;f++){
     let num=Math.floor(Math.random()*101);
     document.write(`${esPar(num)} <br>`);
 } */
+
+//! Confeccionar una funcion que reciba un array y retorne por defecto la suma de todos sus elementos.  Con un segundo parametro predeterminado debemos poder indicar
+//! a partir de que elemento iniciar su suma. Finalmente un tercer parametro predeterminado indicar hasta que valor afectuar.
+
+function sumar(arr, desde = 0, hasta = arr.length){
+    let suma=0;
+    for(let f=desde;f<hasta;f++){
+        suma=suma+arr[f];
+    }
+    return suma;
+}
+
+console.log(sumar([1,2,3,4,5]));
+console.log(sumar([1,2,3,4,5],3));
+console.log(sumar([1,2,3,4,5],2,4));
