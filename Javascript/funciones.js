@@ -268,7 +268,7 @@ for(let f=2;f<=10;f++){
 
 //! Confeccionar una función que le enviemos un entero y nos retorne true si es par y false si es impar.Llamar a la función esPar 100 veces pasando los valores
 //! del 1 al 100.
-function esPar(valor){
+/* function esPar(valor){
     if(valor%2==0){
         return true;
     }else{
@@ -278,4 +278,4 @@ function esPar(valor){
 for(let f=1;f<100;f++){
     let num=Math.floor(Math.random()*101);
     document.write(`${esPar(num)} <br>`);
-}
+} */
