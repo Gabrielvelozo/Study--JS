@@ -283,7 +283,7 @@ for(let f=1;f<100;f++){
 //! Confeccionar una funcion que reciba un array y retorne por defecto la suma de todos sus elementos.  Con un segundo parametro predeterminado debemos poder indicar
 //! a partir de que elemento iniciar su suma. Finalmente un tercer parametro predeterminado indicar hasta que valor afectuar.
 
-function sumar(arr, desde = 0, hasta = arr.length){
+/* function sumar(arr, desde = 0, hasta = arr.length){ // Parametro predeterminado  ----
     let suma=0;
     for(let f=desde;f<hasta;f++){
         suma=suma+arr[f];
@@ -293,4 +293,18 @@ function sumar(arr, desde = 0, hasta = arr.length){
 
 console.log(sumar([1,2,3,4,5]));
 console.log(sumar([1,2,3,4,5],3));
-console.log(sumar([1,2,3,4,5],2,4));
+console.log(sumar([1,2,3,4,5],2,4)); */
+
+//! Elaborar una funcion que reciba y muestre los datos de una familia. Mostrar el nombre del padre, madre y en el caso de tener hijos con el parametro rest.
+
+/* function family(padre,madre,...hijo){  // Atributo REST //
+    document.write(`Padre: <b>${padre}</b> <hr>`);
+    document.write(`Madre: <b>${madre}</b> <hr>`);
+    if(hijo.length>0){
+        document.write(`Hijo: <b>${hijo }</b> `)
+    }
+}
+
+family('El Osky',' La Brendi del bajo','Olivia',' Noah',' Spike'); */
+
+// 142
