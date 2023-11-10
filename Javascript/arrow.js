@@ -59,9 +59,11 @@ contarHasta(5,detalle=>document.write(`${detalle} <br>`)); // Funcion FLECHA ano
 //!  Se tiene un array con componentes de tipo array que representan un articulo. Se almacena el nombre del producto y su precio. Cargar en otro array los articulos que tienen
 //! un precio mayor o igual a 200. Primero resolverlo utilizando un for y luego con el metodo filter del array. 
 
-// REsuelto con  un FOR
+/* 
 const productos=[['Manzanas',120],['Naranjas',150],['Kiwis',280],['Peras',240]];
 const mayorPrecio=[];
+
+// Resuelto con For ** 
 for(let f=0;f<productos.length;f++){
     for(let t=0;t<productos.length;t++){
         if(productos[f][t]>=200){
@@ -69,11 +71,29 @@ for(let f=0;f<productos.length;f++){
         }
     }
 }
+// Resuelto con For OF **
+for(let elemento of productos){
+    if(elemento[1]>=200){
+        mayorPrecio.push(elemento);
+    }
+}
 console.log(mayorPrecio);
 console.log(productos);
 
 // Resuelto con .filter() 
 const mayorPrecio2=productos.filter(argumento => argumento[1]>=200);
-console.log(mayorPrecio2);
+console.log(mayorPrecio2); */
 
-//149
+//!  Se tiene un array con los nombres y claves de usuarios: - Crear un array con los nombres. - Crear otro array con nombres y clave con un string vacio. Usar el metodo .map()
+
+const usuarios=[['Juan','sd432Xrf%'],['Carlos','$ASGFDTG$%3v'],['Ana','FDSFsdfgh42!'],['Marcos','1@$Zsda']];
+
+//Resuelto con .map()
+// - Crear un array con los nombres.
+const user=usuarios.map(dato => dato[0]);
+console.log(user);
+
+// Crear otro array con nombres y clave con un string vacio.
+const pass=usuarios.map(dato=>[dato[0], '']);
+console.log(pass);
+
