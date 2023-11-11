@@ -54,7 +54,7 @@ contarHasta(2,detalle=>alert(detalle));
 contarHasta(5,detalle=>document.write(`${detalle} <br>`)); // Funcion FLECHA anonima Xq no tiene asignado una variable o constante */
 
 
-//todo  ---- METODO FILTER ----
+//todo  ------------------------------------------------------------- METODO filter() ---------------------------------------------------------------------------------------------
 
 //!  Se tiene un array con componentes de tipo array que representan un articulo. Se almacena el nombre del producto y su precio. Cargar en otro array los articulos que tienen
 //! un precio mayor o igual a 200. Primero resolverlo utilizando un for y luego con el metodo filter del array. 
@@ -84,8 +84,10 @@ console.log(productos);
 const mayorPrecio2=productos.filter(argumento => argumento[1]>=200);
 console.log(mayorPrecio2); */
 
-//!  Se tiene un array con los nombres y claves de usuarios: - Crear un array con los nombres. - Crear otro array con nombres y clave con un string vacio. Usar el metodo .map()
+//todo  ------------------------------------------------------------- METODO map() ---------------------------------------------------------------------------------------------
 
+//!  Se tiene un array con los nombres y claves de usuarios: - Crear un array con los nombres. - Crear otro array con nombres y clave con un string vacio. Usar el metodo .map()
+/* 
 const usuarios=[['Juan','sd432Xrf%'],['Carlos','$ASGFDTG$%3v'],['Ana','FDSFsdfgh42!'],['Marcos','1@$Zsda']];
 
 //Resuelto con .map()
@@ -96,4 +98,23 @@ console.log(user);
 // Crear otro array con nombres y clave con un string vacio.
 const pass=usuarios.map(dato=>[dato[0], '']);
 console.log(pass);
+ */
 
+//todo  ------------------------------------------------------------- METODO fin() & findIndex() ---------------------------------------------------------------------------------
+
+//! Se tiene un array con los nombres y claves de usuarios:
+
+const usuarios=[['Juan','sd432Xrf%'],['Carlos','$ASGFDTG$%3v'],['Ana','FDSFsdfgh42!'],['Marcos','1@$Zsda']];
+
+//! Mediante el metodo findIndex recuperar el indice de la componente del array usuarios de un nombre que ingresemos por teclado. Mostrar la clave de dicho usuario.
+
+let teclado= prompt('Ingrese un nombre de usuario: ');
+const indice=usuarios.findIndex(posicion => posicion[0]==teclado);
+console.log(indice);
+if(indice!=-1){
+    console.log('Clave: ' + usuarios[indice][1]);
+}else{
+    alert('No existe el usuario:  ' + teclado);
+}
+
+//todo  ------------------------------------------------------------- METODO some() & every() ---------------------------------------------------------------------------------
