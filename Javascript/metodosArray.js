@@ -154,11 +154,12 @@ console.log(usuarios); */
 /* const productos=[['Manzanas',320],['Naranjas',150],['Kiwis',280],['Peras',240]];
 //Menor a mayor
 productos.sort((a,b)=>a[1]-b[1]);
-console.log(productos); */
+console.log(productos);  
 
 // Mayor a menor.
-/* productos.sort((a,b)=>b[1]-a[1]);
+ productos.sort((a,b)=>b[1]-a[1]);
 console.log(productos); */
+
 
 //todo  ------------------------------------------------------------------ METODO reduce() & reduceRight() ---------------------------------------------------------------
 
@@ -197,7 +198,7 @@ document.write(bolillero); */
 //! Confeccionar una funcion que le pasemos dos valores enteros y nos retorne un array que represente una matriz de N filas y N columnas. Se deben inicializar
 //! todos los elementos de la matriz con cero.
 
-function retornarMatriz (filas,columnas){
+/* function retornarMatriz (filas,columnas){
     let matriz=new Array(filas);
     for(let f=0;f<filas;f++){
         matriz[f]=new Array(columnas);
@@ -205,4 +206,4 @@ function retornarMatriz (filas,columnas){
     }
     return matriz;
 }
-console.log(retornarMatriz(4,10));
+console.log(retornarMatriz(4,10)); */
