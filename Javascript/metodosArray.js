@@ -251,9 +251,73 @@ console.log(bolillasElminadas); */
 //! Se tiene el siguiente array: Empleando el medotodo concat(), procedert a generar una copia sin array anidados, debe quedar con la sigueinte estructura:
 //! [1,2,3,4,5,6,7,8,9] - Este proceso se llama aplanar array.
 
-const problema=[[1,2,3],[4,5,6],[7,8,9]];
+/* const problema=[[1,2,3],[4,5,6],[7,8,9]];
 console.log(problema);
 let aplanar=problema[0].concat(problema[1],problema[2]); // Aplanar array.
 console.log(aplanar);
-
+ */
 //todo  --------------------------------------------------------------------------- join() ----------------------------------------------------------------------------
+// join() --> retorna un string con un elemento que se le indique en el parametro.
+
+//! En este problema no deben utilizar el metodo join() sino implementar un algoritmo que remplace en algunas situaciones el metodo join()
+//! La funcion UNIR solo debe funcionar para arrays planos. Debe retornoar un string con todos los elementos del array separados por el valor del segundo parametro.
+
+/* function unir(arreglo, parametro = ','){
+   let cadena='';
+   for(let f=0;f<arreglo.length;f++){
+    if(f < arreglo.length - 1){
+        cadena= cadena + arreglo[f] + parametro;
+    }else{
+        cadena=cadena + arreglo[f];
+    }
+   }
+   return cadena;
+}
+const ejemplo=['Hola','Mundo','Soy el Leon','CastaFuera'];
+console.log(ejemplo);
+const ejemploUnir=unir(ejemplo,'-');
+console.log(ejemploUnir); */
+
+//todo  --------------------------------------------------------------------------- entries() ----------------------------------------------------------------------------
+// entries() --> nos devuelvo posicion y valor.
+
+//! Se tiene un array con valores numericos, obtener el mayor elemento del array y su posicion.
+/* const practica=[10,45,120,34,16,700];
+let mayor=practica[0];
+let posicion=0;
+for(let elemento of practica.entries()){
+    if(elemento[1]>mayor){
+        mayor=elemento[1];
+        posicion=elemento[0];
+    }
+}
+console.log(`El mayor valor del array es ${mayor} en su posicion ${posicion}`);
+ */
+//todo  --------------------------------------------------------------------------- spread() ----------------------------------------------------------------------------
+// spread() --> la sintaxis que se lo utiliza es ...
+//! Se tiene un array con 10 numeros . 1 Mediante el metodo slice() de la clase array extraer los primeros 5 elementos del array y luego llamar al metodo 'max'
+//! para obtener el mayor elemento.
+//! 2 - Hacer el mismo proceso con los 5 elementos siguientes, pero obtener el menor elemento empleando el metodo 'min' de la clase Math.
+//! 3 - Crear otro array que contenga los primeros tres elementos y los ultimos tres elementos del arreglo1. Emplear el metodo slice() y el operador spread()
+
+/* const arreglo=[10,45,3,50,33,16,67,2,1,12];
+console.log(arreglo);
+console.log(Math.max(...arreglo.slice(0,5)));
+console.log(Math.min(...arreglo.slice(5)));
+const arreglo2=[...arreglo.slice(0,3), ...arreglo.slice(-3)];
+console.log(arreglo2);
+ */
+
+ //                                                                   Desestructuracion de Array
+ 
+ //! Confeccionar una funcion que reciba un array con numeros y nos retorne un array con el mayor y menor elemento. - Cuando llamemos a la funcion proceder a
+ //! desestructurar el array devuelto en dos tipos de datos primitivos.
+ 
+ function mayorMenor(arreglo){
+    let mayor=Math.max(...arreglo);
+    let menor=Math.min(...arreglo);
+    return [mayor,menor];
+ }
+
+ const number=[10,56,2,788,12,45];
+console.log(mayorMenor(number));
