@@ -207,3 +207,53 @@ document.write(bolillero); */
     return matriz;
 }
 console.log(retornarMatriz(4,10)); */
+
+//todo  --------------------------------------------------------------------------- slice() ----------------------------------------------------------------------------
+
+// Realiza una copia del array
+//! Confeccionar una funcion que le pasemos un array con componentes de tipo array y nos retorne una copia de un array anidado de una determinada posicion.
+/* function copiarElemento(arreglo,posicion){
+   return arreglo[posicion].slice();
+}
+
+const arr=[[1,2,3],[4,5,6],[7,8,9]];
+const copiaArr=copiarElemento(arr,2);
+arr[2][0]='Spike';
+console.log(arr);
+console.log(copiaArr);
+ */
+
+//todo  --------------------------------------------------------------------------- splice() ----------------------------------------------------------------------------
+
+// splice() --> Permite borrar elementos de un array puede utilizar dos parametros y tambien nos permite borrar y agregar elementos.
+
+//! Generar un array con 50 numeros enteros que respresente un bolillero. Cargar valores aleatorios comprendidos entre 1 y 50, no permitir que se repitan.
+//! Luego buscar en el array el numero 25 y apartir de dicho valor inclusive, eliminar toodos los elemntos restantes hasta el final del array.
+//! Imprimir la cantidad de numeros que quedaron en el bolillero y dichos numeros.
+
+/* let bolillero=[];
+while(bolillero.length!=50){
+    let random=Math.floor(Math.random()*50)+1;
+    if(bolillero.includes(random)==false){
+        bolillero.push(random);
+    }
+}
+console.log(bolillero);
+
+let numero25=bolillero.findIndex(parametro => parametro == 25);
+console.log(numero25);
+let bolillasElminadas=bolillero.splice(numero25);
+console.log(bolillasElminadas); */
+
+//todo  --------------------------------------------------------------------------- concat() ----------------------------------------------------------------------------
+// concat() --> Retorna un nuevo array al usar el metodo, no modifica los arreglos que utilizan el metodo.
+
+//! Se tiene el siguiente array: Empleando el medotodo concat(), procedert a generar una copia sin array anidados, debe quedar con la sigueinte estructura:
+//! [1,2,3,4,5,6,7,8,9] - Este proceso se llama aplanar array.
+
+const problema=[[1,2,3],[4,5,6],[7,8,9]];
+console.log(problema);
+let aplanar=problema[0].concat(problema[1],problema[2]); // Aplanar array.
+console.log(aplanar);
+
+//todo  --------------------------------------------------------------------------- join() ----------------------------------------------------------------------------
