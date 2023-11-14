@@ -316,8 +316,10 @@ console.log(arreglo2);
  function mayorMenor(arreglo){
     let mayor=Math.max(...arreglo);
     let menor=Math.min(...arreglo);
-    return [mayor,menor];
+    return [menor,mayor];
  }
 
- const number=[10,56,2,788,12,45];
-console.log(mayorMenor(number));
+const number=[10,56,2,788,12,45];
+console.log(number);
+const [men, may]=mayorMenor(number);
+console.log(`El menor numero del array es: ${men} y el mayor: ${may}`);
