@@ -1,3 +1,10 @@
+// Eliminar propiedades -- || delete objeto.propiedad   || --
+// Agregar propiedades -- || objeto.propiedad || --
+// Espacion en blanco -- || objeto['Espacio entre palabras'] || -- 
+
+
+
+
 //! Definir un objeto que represente un alumno con las propiedades> Nombre, Materia, Nota1, Nota2, Nota3.
 //! Iniciialozar las propiedades con distintos valores. Confeccionar una funcion que muestre todos los datos del alumno, mostrar tambien el promedido de las tres
 //! notas y un mensaje que promociono si su promedio es >= 7. Desarrollar otra funcion que retorne el promedio de las tres notas del alumno, llamar a la misma
@@ -65,7 +72,7 @@ comparar(jugador1,jugador2) */
 //! Crear un objeto llamado empleado1 y pensar que propiedades podemos definir del mismo. Crear otro objeto empleado2 con las mismas propiedades, pero otros valores.
 //! Confeccionar una funcion que le enviemos un empleado y lo muestre.
 
-const empleado1={
+/* const empleado1={
     nombre: 'El Quique',
     sector: 'Analista',
     antiguedad: 3,
@@ -85,6 +92,36 @@ function imprimir(params) {
 
 imprimir(empleado1);
 imprimir(empleado2);
-console.log(empleado1);
+console.log(empleado1); */
 
-// 186
+//! Definir un objeto llamado 'computadora1' con dos propiedades, una llamada 'cpu' con el valor 'i7' y 'memoria ram' con el valor '16gb'.
+//! Llamar seguidamente a una funcion que le pasemos el objeto y nos imprima los nombres de las propiedades y sus valores mediante un for in. Agregar por asignacion
+//! una tercer propiedad llamada 'disco duro' con el valor de '1tb'. Cada modificacion del objeto llamar a la funcion imprimir y su valor, agregar al objeto computadora.
+//! Ingresar el nombre de una propiedad y mostrar su valor si existe o un mensaje si no existe. Ingresar nuevamente un nombre de propiedad y eliminarla del objeto.
+
+const computadora1= {
+    cpu: 'I7',
+    'memoria ram': '16gb',
+}
+
+function imprimirObjeto(objeto){
+    for(let propiedad in  objeto){
+        console.log(` ${propiedad} = ${objeto[propiedad]}`);
+    }
+}
+computadora1["disco duro"]= '1tb';
+const nuevaPropiedad= prompt('Ingrese una nueva propiedad: ');
+const valor=prompt('Ingrese el valor de la propiedad: ')
+computadora1[nuevaPropiedad]=valor;
+imprimirObjeto(computadora1);
+
+let propiedad=prompt('Ingrese una propiedad cpu/ memoria ram/ disco duro / sistema  : ');
+
+if(propiedad in computadora1){
+    console.log(`El valor de la propiedad ${propiedad} es ${computadora1[propiedad]}`);
+}else{
+    console.log(`No existe la propiedad.`);
+}
+
+delete computadora1.cpu;
+imprimirObjeto(computadora1)
