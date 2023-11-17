@@ -177,7 +177,7 @@ imprimir(objetoCliente); */
 * Definir un objero llamado 'tablaMultiplicacion'. Sus atributos son el numero (la tabla de multiplicar 2, 3, etc.), terminos y un metodo que muestre la tabla en pantalla. 
 * Luego mostrar la tabla de multiplicacion del 2, 3 y 5.
 */
-const tablaMultiplicacion={
+/* const tablaMultiplicacion={
     numero:2,
     termino:10,
     pantalla(num){
@@ -191,9 +191,65 @@ tablaMultiplicacion.pantalla();
 tablaMultiplicacion.numero=3;
 tablaMultiplicacion.pantalla();
 tablaMultiplicacion.numero=5;
-tablaMultiplicacion.pantalla();
+tablaMultiplicacion.pantalla(); */
 
 /* 
-* Definir un objeto llamado Alumno1. Definir como propiedades: Nombre, Nota1, Nota2 y Nota3 (Almacenar valores de prueba en cada propiedad). Definir un metodo que muestre el nombre y el promedio
-* de notas y un segundo metodo que informe la cantidad de aplazos (notas menores a 4).
+* Definir un objeto llamado Alumno1. Definir como propiedades: Nombre, Nota1, Nota2 y Nota3 (Almacenar valores de prueba en cada propiedad). Definir un metodo que muestre el 
+* nombre y el promedio de notas y un segundo metodo que informe la cantidad de aplazos (notas menores a 4).
 */
+
+/* const alumno1={
+    nombre:'Noah',
+    nota1: 10,
+    nota2:5,
+    nota3:4,
+    informacion(){
+        document.write(`El nombre: ${this.nombre}<br> Promedio: ${(this.nota1 + this.nota2 + this.nota3) / 3}`)
+    },
+    aplazos(){
+        let aplazo=0;
+        if(this.nota1 <= 4){
+            aplazo++;
+        }
+        if(this.nota2 <= 4){
+            aplazo++;
+        }
+        if(this.nota3 <=4){
+            aplazo++;
+        }
+        document.write(`<br>Aplazos: ${aplazo}`);
+    }
+}
+
+alumno1.informacion();
+alumno1.aplazos(); */
+
+/* 
+* Se tiene la definicion de un objeto que representa un curso. 
+* Confecionar un metodo que muestre el nombre del curso, su duracion, el nombre del instructor y los prerequisitos
+* - Aregar como prerequisitos 'CSS' al curso1. 
+* - Modificar los años de experiencia a 4. 
+* - Eliminar del objeto la descripcion del instructor.
+*/
+                                             // Todo Propiedades de tipo array y Objeto
+const curso1={
+    nombre:'React',
+    duracion: 40,
+    deescripcion: 'Introduccion a la biblioteca React para el desarollo de interfaces visuales',
+    instructor:{
+        nombre: 'Ana Martinez',
+        experiencia: 2,
+        descripcion: 'Instructora con mas de 5 años de experiencia en desarrollo web',
+    },
+    prerrequisitos:['Html','Javascript'],
+    mostrar(){
+        document.write(`Bienvenidos al curso: ${curso1.nombre} <br> Duracion es ${curso1.duracion} '<br> Instructor: ${curso1.instructor.nombre} <br>`);
+        document.write(`Requisitos Deseables: ${curso1.prerrequisitos} <hr>`);
+    }
+}
+curso1.mostrar();
+curso1.prerrequisitos.push('CSS');
+curso1.mostrar();
+curso1.instructor.experiencia=4;
+console.log(curso1);
+delete curso1.instructor.descripcion;
