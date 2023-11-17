@@ -232,7 +232,7 @@ alumno1.aplazos(); */
 * - Eliminar del objeto la descripcion del instructor.
 */
                                              // Todo Propiedades de tipo array y Objeto
-const curso1={
+/* const curso1={
     nombre:'React',
     duracion: 40,
     deescripcion: 'Introduccion a la biblioteca React para el desarollo de interfaces visuales',
@@ -241,15 +241,161 @@ const curso1={
         experiencia: 2,
         descripcion: 'Instructora con mas de 5 años de experiencia en desarrollo web',
     },
-    prerrequisitos:['Html','Javascript'],
+    prerequisitos:['Html','Javascript'],
     mostrar(){
-        document.write(`Bienvenidos al curso: ${curso1.nombre} <br> Duracion es ${curso1.duracion} '<br> Instructor: ${curso1.instructor.nombre} <br>`);
+        document.write(`Bienvenidos al curso: ${curso1.nombre} <br> Duracion: ${curso1.duracion} horas <br> Instructor: ${curso1.instructor.nombre} <br>`);
         document.write(`Requisitos Deseables: ${curso1.prerrequisitos} <hr>`);
     }
 }
 curso1.mostrar();
-curso1.prerrequisitos.push('CSS');
+curso1.prerequisitos.push('CSS');
 curso1.mostrar();
 curso1.instructor.experiencia=4;
 console.log(curso1);
-delete curso1.instructor.descripcion;
+delete curso1.instructor.descripcion; */
+
+/* 
+* Se tiene la definicion de un objeto que representa una pelicula.
+* - Imprimir el titulo de la pelicula, la cantidad de actores principales y sus nombres en un metodo que se debe agregar al objeto pelicula.
+* - Agregar el genero de 'Fantasia' a la pelicula.
+* - Cambiar la calificacion por el valor 9.
+* - Mostrar la cantidad de peliculas famosas del director 'George Lucas' (en otro metodo).
+*/
+
+/* const pelicula= {
+    titulo: 'La guerra de las galaxias',
+    duracion: 121,
+    descripcion: ' Una pelicula de ciencia ficcion epica que sigue a un grupo de heroes en su lucha contra el imperio galactico',
+    actores:['Mark Hamill','Harrison Ford','Carrie Fisher'],
+    calificacion: 8.7,
+    generos:['Ciencia Ficcion','Aventura'],
+    director:{
+        nombre:'George Lucas',
+        peliculasFamosas: ['La guerra de las galaxias','Indiana jones'],
+    },
+    impirmir(){
+        document.write(`Titulo: ${pelicula.titulo} <br> Actores Principales: ${pelicula.actores.length} <br> Nombres Actores: ${pelicula.actores}`);
+    },
+}
+pelicula.generos.push('Fantasia');
+pelicula.impirmir();
+pelicula.calificacion=9;
+console.log(pelicula); */
+
+
+/* 
+* Se cuenta con array con cuatro objetos que almacenan datos de distintos paises: Confeccionar las siguientes funciones
+* 1 Imprimir todos los datos paises
+* 2 Pais con mayor poblacion
+* 3 Confeccionar una funcion que se le envie un idioma y luego imprima la cantidad de paises que hablan dicho idioma 'Español', 'Portugues'
+* 4 Imprimir paises que siembran 'Soja'
+* 5 Promedio de vida de las mujeres teniendo en cuenta los 4 paises.
+*/
+const paises = [
+    {
+        nombre: "Argentina",
+        capital: "Buenos Aires",
+        poblacion: 46_000_000,
+        moneda: "Peso Argentino",
+        idioma: "Español",
+        agricultura: ["trigo", "maiz", "soja"],
+        expectativaVida: {
+            hombres: 75,
+            mujeres: 79
+        }
+    },
+    {
+        nombre: "Brasil",
+        capital: "Brasilia",
+        poblacion: 200_000_000,
+        moneda: "Real",
+        idioma: "Portugues",
+        agricultura: ["trigo", "cebada"],
+        expectativaVida: {
+            hombres: 74,
+            mujeres: 78
+        }
+    },
+    {
+        nombre: "Uruguay",
+        capital: "Montevideo",
+        poblacion: 3_000_000,
+        moneda: "Peso Uruguayo",
+        idioma: "Español",
+        agricultura: ["soja"],
+        expectativaVida: {
+            hombres: 81,
+            mujeres: 84
+        }
+    },
+    {
+        nombre: "Chile",
+        capital: "Santiago",
+        poblacion: 19_000_000,
+        moneda: "Peso Chileno",
+        idioma: "Español",
+        agricultura: ["maiz", "cebada"],
+        expectativaVida: {
+            hombres: 80,
+            mujeres: 82
+        }
+    }
+];
+// 1 -
+function imprimir(pais){
+   for(let dato of pais){
+    document.write(`${dato.nombre} <br> ${dato.capital} <br> ${dato.poblacion} <br> ${dato.moneda}<br>${dato.idioma}<br>${dato.expectativaVida.hombres}<br>${dato.expectativaVida.mujeres}<br>`);
+    for(let agro of dato.agricultura){
+        document.write(agro + '<br>');
+    }
+    document.write(`<br><br>`);
+   }   
+}
+
+// 2 - 
+function paisMayorPoblacion(paises){
+    let mayorPoblacion=paises[0];
+    for(let pais of paises){
+        if(pais.poblacion > mayorPoblacion.poblacion){
+            mayorPoblacion=pais;
+        }
+    }
+    document.write(`El pais con mayor poblacion es, ${mayorPoblacion.nombre} con ${mayorPoblacion.poblacion} habitantes <hr>`);
+}
+
+// 3 - 
+function cantidadIdiomas(paises,idioma){
+    let cantidadP=0;
+    for(let pais of paises){
+        if(pais.idioma == idioma){
+            cantidadP++;
+        }
+    }
+    document.write(`La cantidad de paises de idioma ${idioma} son: ${cantidadP}<br>`);
+}
+
+// 4 - 
+function paisesSoja(paises){
+  for(let pais of paises){
+    if(pais.agricultura.includes('soja')){
+        document.write(`${pais.nombre} <br>`);
+    }
+  }
+}
+
+// 5 - 
+function promedioVida(paises){
+    let pVida=0;
+    for(let promedio of paises){
+        pVida+=promedio.expectativaVida.mujeres;
+    }
+    document.write(`El promedio de vida de la region de las mujeres es : ${pVida/paises.length}`);
+}
+
+
+imprimir(paises);
+paisMayorPoblacion(paises);
+cantidadIdiomas(paises,'Español');
+cantidadIdiomas(paises,'Portugues');
+paisesSoja(paises);
+promedioVida(paises);
