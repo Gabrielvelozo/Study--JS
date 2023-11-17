@@ -291,7 +291,7 @@ console.log(pelicula); */
 * 4 Imprimir paises que siembran 'Soja'
 * 5 Promedio de vida de las mujeres teniendo en cuenta los 4 paises.
 */
-const paises = [
+/* const paises = [
     {
         nombre: "Argentina",
         capital: "Buenos Aires",
@@ -389,7 +389,7 @@ function promedioVida(paises){
     for(let promedio of paises){
         pVida+=promedio.expectativaVida.mujeres;
     }
-    document.write(`El promedio de vida de la region de las mujeres es : ${pVida/paises.length}`);
+    document.write(`El promedio de vida de las mujeres es : ${pVida/paises.length}`);
 }
 
 
@@ -398,4 +398,145 @@ paisMayorPoblacion(paises);
 cantidadIdiomas(paises,'Español');
 cantidadIdiomas(paises,'Portugues');
 paisesSoja(paises);
-promedioVida(paises);
+promedioVida(paises); */
+
+/* 
+* Se cuenta con un array con datos de varios deportistas: Confeccionar las siguientes funciones.
+* 1 - Imprimir todos los datos de los deportistas
+* 2 - Imprimir los deportistas que han obtenido medallas de oro.
+* 3 - Ordenar los deportistas por edades de menor a mayor, luego volver a imprimir los datos.
+* 4 - imprimir la cantidad total de medallas de cada participante.
+*/
+const deportistas = [
+    {
+        nombre: "Juan",
+        apellido: "Perez",
+        edad: 20,
+        deporte: "Pesas",
+        medallas: [
+            {
+                tipo: "oro",
+                cantidad: 2
+            },
+            {
+                tipo: "bronce",
+                cantidad: 1
+            }
+        ]
+    },
+    {
+        nombre: "Pedro",
+        apellido: "Gonzalez",
+        edad: 25,
+        deporte: "Futbol",
+        medallas: [
+            {
+                tipo: "oro",
+                cantidad: 1
+            },
+            {
+                tipo: "plata",
+                cantidad: 3
+            },
+            {
+                tipo: "bronce",
+                cantidad: 3
+            }
+        ]
+    },
+    {
+        nombre: "Maria",
+        apellido: "Lopez",
+        edad: 22,
+        deporte: "Tenis",
+        medallas: []
+    },
+    {
+        nombre: "Ana",
+        apellido: "Martinez",
+        edad: 21,
+        deporte: "Natacion",
+        medallas: [
+            {
+                tipo: "plata",
+                cantidad: 1
+            }
+        ]
+    },
+    {
+        nombre: "Marta",
+        apellido: "Gomez",
+        edad: 20,
+        deporte: "Natacion",
+        medallas: [
+            {
+                tipo: "plata",
+                cantidad: 1
+            },
+            {
+                tipo: "bronce",
+                cantidad: 1
+            }
+        ]
+    }
+]
+// 1 - 
+function imprimir(deportistas){
+    // deportistas.forEach(deportista => console.log(deportista)); // forEach()
+    for(let deporte of deportistas){   // for of()
+        console.log(deporte);
+    }
+}
+//imprimir(deportistas);
+
+// 2 - 
+function medallaOro(deportistas){
+    // for of
+   /*  for(let deportista of deportistas){
+       for(let medalla of deportista.medallas){
+        if(medalla.tipo == 'oro'){
+            console.log(`${deportista.nombre}`);
+        }
+       }
+    } */ 
+    // Filter()
+   const deportistaOro=deportistas.filter(deportista=>deportista.medallas.filter(medalla => medalla.tipo == 'oro').length ==  1);
+   console.log(deportistaOro);
+}
+//medallaOro(deportistas);
+
+// 3 - 
+function menorAMayor(deportistas){
+    // algoritmo de ordenamiento
+    /* for(let k=1; k<deportistas.length;k++){
+        for(let f=0;f<deportistas.length - k;f++){
+            if(deportistas[f].edad>deportistas[f+1].edad){
+                let aux=deportistas[f];
+                deportistas[f]=deportistas[f+1];
+                deportistas[f+1]=aux;
+            }
+        }
+    } */
+    // metodo sort()
+    deportistas.sort((a,b)=> a.edad -b.edad);
+    
+    console.log(deportistas);
+}
+//menorAMayor(deportistas);
+
+// 4 -
+function participanteMedalla(deportistas){
+    // for of
+   /*  for(let deportista of deportistas){
+        let cantidad=0;
+        for(let medalla of deportista.medallas){
+            cantidad+=medalla.cantidad;
+        }
+        console.log(`${deportista.nombre} ${cantidad}`);
+    } */
+    // map() & reduce()
+    const deportistaMedalla=deportistas.map(deportista=>deportista.nombre + ' = ' + deportista.medallas.reduce((acumulador, medalla)=> acumulador+medalla.cantidad,0)) ;
+    console.log(deportistaMedalla);
+}
+participanteMedalla(deportistas);
+//198
