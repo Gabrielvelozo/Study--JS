@@ -480,9 +480,62 @@ const deportistas = [
         ]
     }
 ]
-// 1 - 
+// 1 - Imprimir todos los datos de los deportistas
 function imprimir(deportistas){
-    // deportistas.forEach(deportista => console.log(deportista)); // forEach()
+    //? forEach()
+   //deportistas.forEach(deportista=>console.log(deportista));
+   //? for of
+   /* for(let deportista of deportistas){
+    console.log(deportista);
+   } */
+   //? for in
+   /* for(deportista in deportistas){
+    console.log(deportistas[deportista]);
+   } */
+   //? for clasico
+   /* for(let i=0;i<deportistas.length;i++){
+    console.log(deportistas[i]);
+   } */
+   //? map()
+   /* const imprimirDeportista=deportistas.map(deportista=>deportista);
+   console.log(imprimirDeportista); */
+}
+
+imprimir(deportistas);
+
+// 2 - Imprimir los deportistas que han obtenido medallas de oro.
+function medallaOro(deportistas){
+    //?filter()
+    /* const deportistaOro=deportistas.filter(deporista=>deporista.medallas.filter(medalla=>medalla.tipo == 'oro').length)
+    console.log(deportistaOro); */
+    //? for of
+    /* for(let deporista of deportistas){
+        for(let medalla of deporista.medallas){
+            if(medalla.tipo == 'oro'){
+                console.log(deporista.nombre);
+            }
+        }
+    } */
+    
+}
+medallaOro(deportistas);
+
+
+
+
+
+
+
+
+
+
+
+
+//! ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/* // 1 - 
+function imprimir(deportistas){
+    //? deportistas.forEach(deportista => console.log(deportista)); // forEach()
     for(let deporte of deportistas){   // for of()
         console.log(deporte);
     }
@@ -491,15 +544,16 @@ function imprimir(deportistas){
 
 // 2 - 
 function medallaOro(deportistas){
-    // for of
-   /*  for(let deportista of deportistas){
+    //? for of
+    for(let deportista of deportistas){
        for(let medalla of deportista.medallas){
         if(medalla.tipo == 'oro'){
             console.log(`${deportista.nombre}`);
         }
        }
-    } */ 
-    // Filter()
+    } 
+
+    //? Filter()
    const deportistaOro=deportistas.filter(deportista=>deportista.medallas.filter(medalla => medalla.tipo == 'oro').length ==  1);
    console.log(deportistaOro);
 }
@@ -507,8 +561,8 @@ function medallaOro(deportistas){
 
 // 3 - 
 function menorAMayor(deportistas){
-    // algoritmo de ordenamiento
-    /* for(let k=1; k<deportistas.length;k++){
+    //? algoritmo de ordenamiento
+     for(let k=1; k<deportistas.length;k++){
         for(let f=0;f<deportistas.length - k;f++){
             if(deportistas[f].edad>deportistas[f+1].edad){
                 let aux=deportistas[f];
@@ -516,8 +570,8 @@ function menorAMayor(deportistas){
                 deportistas[f+1]=aux;
             }
         }
-    } */
-    // metodo sort()
+    } 
+    //? metodo sort()
     deportistas.sort((a,b)=> a.edad -b.edad);
     
     console.log(deportistas);
@@ -526,17 +580,128 @@ function menorAMayor(deportistas){
 
 // 4 -
 function participanteMedalla(deportistas){
-    // for of
-   /*  for(let deportista of deportistas){
+    //? for of
+    for(let deportista of deportistas){
         let cantidad=0;
         for(let medalla of deportista.medallas){
             cantidad+=medalla.cantidad;
         }
         console.log(`${deportista.nombre} ${cantidad}`);
-    } */
-    // map() & reduce()
+    } 
+    //? map() & reduce()
     const deportistaMedalla=deportistas.map(deportista=>deportista.nombre + ' = ' + deportista.medallas.reduce((acumulador, medalla)=> acumulador+medalla.cantidad,0)) ;
     console.log(deportistaMedalla);
 }
-participanteMedalla(deportistas);
-//198
+participanteMedalla(deportistas); */
+
+/* 
+* Una inmobiliaria tiene una serie de inmuebles para el alquiler almacenados en un array con elementos de tipo objeto.
+* 1 - Imprimir todos los datos del inmuble. forEach()
+* 2 - Imprimir los inmubles con 4 o mas cuartos y garaje.
+* 3 - Confeccionar una funcion que imprima todas las viviendas de un cierto tipo que llega como parametro.
+*/
+
+/* const inmuebles = [
+    {
+        id: 1,
+        tipo: "Casa",
+        precio: 10000,
+        caracteristicas: {
+            cuartos: 4,
+            baños: 2,
+            garage: true
+        },
+        ubicacion: {
+            ciudad: "Córdoba",
+            calle: "Colon 112"
+        }
+    },
+    {
+        id: 2,
+        tipo: "Departamento",
+        precio: 20000,
+        caracteristicas: {
+            cuartos: 3,
+            baños: 1,
+            garage: false
+        },
+        ubicacion: {
+            ciudad: "Córdoba",
+            calle: "Lima 234"
+        }
+    },
+    {
+        id: 3,
+        tipo: "Departamento",
+        precio: 30000,
+        caracteristicas: {
+            cuartos: 5,
+            baños: 2,
+            garage: true
+        },
+        ubicacion: {
+            ciudad: "Córdoba",
+            calle: "Urquiza 765"
+        }
+    },
+    {
+        id: 4,
+        tipo: "Casa",
+        precio: 12000,
+        caracteristicas: {
+            cuartos: 3,
+            baños: 1,
+            garage: false
+        },
+        ubicacion: {
+            ciudad: "Carlos Paz",
+            calle: "San Martin 765"
+        }
+    }
+] */
+
+// 1 - Imprimir todos los datos del inmuble. 
+// ?forEach()
+//inmuebles.forEach(alquiler=>console.log(alquiler)); 
+//? for in
+/* for(alquiler in inmuebles){ 
+    console.log(inmuebles[alquiler]);
+} */
+//? for of
+/* for(let alquiler of inmuebles){
+    console.log(alquiler);
+} */
+//? for clasico
+/* for(let i=0;i<inmuebles.length;i++){
+    console.log(inmuebles[i]);
+} */
+
+// 2 - Imprimir los inmubles con 4 o mas cuartos y garaje.
+/* 
+//?filter()\
+const cuatroCuartos=inmuebles.filter(alquiler=>alquiler.caracteristicas.cuartos >= 4 && alquiler.caracteristicas.cuartos);
+console.log(cuatroCuartos); */
+/* 
+//?for of
+for(let inmueble of inmuebles){
+   if(inmueble.caracteristicas.cuartos>=4 && inmueble.caracteristicas.garage){
+    console.log(inmueble);
+   }
+} */
+/* 
+//? for clasico
+for(let i=0;i<inmuebles.length;i++){
+    if(inmuebles[i].caracteristicas.cuartos>=4 && inmuebles[i].caracteristicas.garage){
+        console.log(inmuebles[i]);
+    }
+} */
+
+// 3 - Confeccionar una funcion que imprima todas las viviendas de un cierto tipo que llega como parametro.
+
+/* function inmuebleTipo(inmubles,parametro){
+//? filter()
+    const tipoInmueble=inmubles.filter(inmueble=>inmueble.tipo == parametro);
+    console.log(tipoInmueble);
+}
+inmuebleTipo(inmuebles,'Casa');
+inmuebleTipo(inmuebles,'Departamento'); */
