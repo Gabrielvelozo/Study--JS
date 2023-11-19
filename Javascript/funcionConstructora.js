@@ -46,11 +46,11 @@ let mayorEdad=personas[0];
 * - Mezclar (debe intercambiar los elementos del array en forma aleatoria)
 */
 
-function Naipe(numero, palo){
+/* function Naipe(numero, palo){
     this.numero=numero;
     this.palo=palo;
     this.imprimir = function(){
-        document.write(`Carta: ${this.numero} -  ${this.palo}<br>`);
+        console.log(`${this.numero} -  ${this.palo}`);
     }
 }
 const mazoCartas={
@@ -65,9 +65,49 @@ const mazoCartas={
     },
     imprimir(){
         this.mazo.forEach((naipe)=>naipe.imprimir());
+    },
+    extraer(){
+       return this.mazo.shift();
+    },
+    cantidad(){
+        return this.mazo.length;
+    },
+    mezclar(){
+        return this.mazo.sort(()=>0.5 - Math.random());
     }
 }
 mazoCartas.crear();
 mazoCartas.imprimir();
+console.log(mazoCartas.cantidad());
+console.log(mazoCartas.extraer());
+console.log(mazoCartas.cantidad());
+mazoCartas.mezclar();
+mazoCartas.imprimir();
+ */
+/* 
+* Declarar una funcion constructora que reprensente un usuario (nombre, clave);
+* Almacenar en un array los datos de 3 usuarios. Ingresar por teclado el nombre del usuario, validadr que dicho nombre no se encuentre almacenado en el array de objetos.
+* En el caso que no se encuentre almacenado, pedir el ingreso de la clave y posteoriormente proceder a crear un objeto de tipo usuario e insertarlo en el array.
+* Repetir el proceso hasta que se carguen 3 usuarios. Mostrar finalmente por pantalla los nombres y claves de los 3 usuarios llamando a un metodo que imprima los
+* datos del usuario definido en la funcion constructora.
+*/
 
-// 202
+function User(nombre,clave){
+    this.nombre=nombre;
+    this.clave=clave;
+    this.imprimir=function(){
+        document.write(`User: ${this.nombre} | Password: ${this.clave}<br>`);
+    }
+}
+
+const usuarios=[];
+while(usuarios.length!=3){
+    let ingresarUser=prompt('ingresar el nombre del usuario: ');
+    if(usuarios.includes(ingresarUser==false)){
+       let userPassword=prompt('Ingrese la clave: ');
+        usuarios.push( new User(ingresarUser,userPassword));
+    }
+}
+
+
+console.log(usuarios);
