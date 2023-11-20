@@ -182,7 +182,7 @@ console.log(cadenaNueva); */
 /* const bolillero=[];
 while(bolillero.length!=50){
     let random=Math.floor(Math.random()*50)+1;
-    if(bolillero.includes(random)==false){
+    if(bolillero.includes(random==false){
         bolillero.push(random);
     }
 }

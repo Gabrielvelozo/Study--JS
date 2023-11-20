@@ -1,5 +1,5 @@
 /* 
-* Declarar una funcion constructora para crear objetos que representen una persona. Definir como atributos el nombre, apellido y edad.
+* Declarar una función constructora para crear objetos que representen una persona. Definir como atributos el nombre, apellido y edad.
 * Crear un arreglo con 5 personas.
 * Imprimir el nombre de la persona con mayor edad (Se sabe que las personas tiene una edad distinta.)
 */
@@ -35,13 +35,13 @@ let mayorEdad=personas[0];
 //console.log(mayorEdad); 
 
 /* 
-* Implementar una funcion constructora que cree objetos de tipo naipe español (los palos de esta baraja pueden ser oro, copa, espada y basto).
+* Implementar una función constructora que cree objetos de tipo naipe español (los palos de esta baraja pueden ser oro, copa, espada y basto).
 * Un naipe tiene como atributos el numero y su palo.
-* Crear un objeto llamdado mazoCartas que tenga un atributo de tipo array vacio.
-* En un metodo llmado crear, proceder a cargar en el arreglo mazo objetos de tipo naipe con las 48 cartas de la baraja española.
-* Ademas definir los siguientes metodos: 
+* Crear un objeto llamado mazoCartas que tenga un atributo de tipo array Vacio.
+* En un método limado crear, proceder a cargar en el arreglo mazo objetos de tipo naipe con las 48 cartas de la baraja española.
+* Ademas definir los siguientes métodos: 
 * - Imprimir (mostrar todas las cartas del mazo)
-* - Extraer (debe retornar la carta ubicada en la posicion cero del mazo)
+* - Extraer (debe retornar la carta ubicada en la posición cero del mazo)
 * - Cantidad (debe retornar la cantidad de cartas del mazo)
 * - Mezclar (debe intercambiar los elementos del array en forma aleatoria)
 */
@@ -85,29 +85,75 @@ mazoCartas.mezclar();
 mazoCartas.imprimir();
  */
 /* 
-* Declarar una funcion constructora que reprensente un usuario (nombre, clave);
-* Almacenar en un array los datos de 3 usuarios. Ingresar por teclado el nombre del usuario, validadr que dicho nombre no se encuentre almacenado en el array de objetos.
-* En el caso que no se encuentre almacenado, pedir el ingreso de la clave y posteoriormente proceder a crear un objeto de tipo usuario e insertarlo en el array.
-* Repetir el proceso hasta que se carguen 3 usuarios. Mostrar finalmente por pantalla los nombres y claves de los 3 usuarios llamando a un metodo que imprima los
-* datos del usuario definido en la funcion constructora.
+* Declarar una función constructora que represente un usuario (nombre, clave);
+* Almacenar en un array los datos de 3 usuarios. Ingresar por teclado el nombre del usuario, validar que dicho nombre no se encuentre almacenado en el array de objetos.
+* En el caso que no se encuentre almacenado, pedir el ingreso de la clave y posteriormente proceder a crear un objeto de tipo usuario e insertarlo en el array.
+* Repetir el proceso hasta que se carguen 3 usuarios. Mostrar finalmente por pantalla los nombres y claves de los 3 usuarios llamando a un método que imprima los
+* datos del usuario definido en la función constructora.
 */
-
-function User(nombre,clave){
+/*
+// Función constructora
+ function User(nombre,clave){
     this.nombre=nombre;
     this.clave=clave;
     this.imprimir=function(){
-        document.write(`User: ${this.nombre} | Password: ${this.clave}<br>`);
+        document.write(`User: ${this.nombre}  Password: ${this.clave}<br>`);
+    }
+} 
+// Clase
+class User{
+    constructor(nombre,clave){
+        this.nombre=nombre;
+        this.clave=clave;
+    }
+    imprimir(){
+        document.write(`User: ${this.nombre} Pass: ${this.clave}`);
     }
 }
+
 
 const usuarios=[];
 while(usuarios.length!=3){
     let ingresarUser=prompt('ingresar el nombre del usuario: ');
-    if(usuarios.includes(ingresarUser==false)){
-       let userPassword=prompt('Ingrese la clave: ');
+    if(usuarios.some(usuario=>usuario.nombre == ingresarUser)){
+      alert('Usuario registrado');
+    }else{
+        let userPassword=prompt('Ingrese la clave: ');
         usuarios.push( new User(ingresarUser,userPassword));
     }
 }
 
 
 console.log(usuarios);
+usuarios.forEach(usuario=>usuario.imprimir());
+
+/* 
+* Declarar una función constructora que represente el lanzamiento de un dado.
+* En la función constructora generar un valor aleatorio comprendido entre 1 y 6. 
+* Almacenar en un array 5 dados. Mostrar cuantos 1,2,3,4,5,6 salieron.
+*/
+/* 
+// Función constructora
+function Dado(){
+    this.radon=Math.floor(Math.random()*6)+1;
+    this.imprimir=function(){
+        document.write(`${this.radon}<br>`);
+    }
+}
+// Clase
+class Dado{
+    constructor(){
+        this.random=Math.floor(Math.random()*6)+1;
+    }
+    imprimir(){
+        document.write(`${this.random<br>}`);
+    }
+}
+const dados=[];
+
+for(let i=0;i<5;i++){
+    dados.push(new Dado());
+}
+console.log(dados);
+dados.forEach(parametro=>parametro.imprimir()); */
+
