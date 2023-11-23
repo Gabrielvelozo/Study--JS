@@ -24,7 +24,7 @@ letrasA(palabra); */
 * - Recorriendo el array mediante el for of.
 * - Filtrando el array mediante el método filter().
 */
-const personas =[
+/* const personas =[
     {
         nombre: 'Juan Perez',
         edad: 30,
@@ -42,18 +42,69 @@ const personas =[
         edad: 28,
     }
 ]
-function persona (text){
-    // filter()
-    //personas.filter(argumento => argumento.nombre == parámetro);
-
-    // for of
-    for( let parte of personas){
-        if(parte.nombre == text){
-            console.log(`${parte.nombre}`);
+function mostrarPersona (personas, parte){
+    // for clásico
+     for(let i=0;i<personas.length;i++){
+        if(personas[i].nombre.toLowerCase().startsWith(parte.toLowerCase())){
+            console.log(personas[i]);
         }
-    }
+    } 
+    //for of
+     for(let persona of personas){
+        if(persona.nombre.toLowerCase().startsWith(parte.toLowerCase())){
+            console.log(persona);
+        }
+    } 
+    //filter()
+     const nombrePe=personas.filter(argumento=>argumento.nombre.toLowerCase().startsWith(parte.toLowerCase()));
+    console.log(nombrePe); 
 }
 
-console.log(persona('pe'));
+mostrarPersona(personas,'pe'); */
 
-//212
+
+/* 
+* Se tienen dos string con una lista de comidas y postres separados por coma. Crear dos array que almacenen las comidas en uno y los postres en otro
+* Seguidamente llamar a una función que le enviemos los dos array y nos retorne otro array con elementos de tipo objeto que surjan de la combinación con cada postre
+*/
+
+
+const listaComidas= 'pizza,hamburguesa,empanada,churrasco,chuleta';
+const listaPostre= 'helado,pastel,tarta,flan';
+const comidas=listaComidas.split(',');
+const postres=listaPostre.split(',');
+
+
+function generarMenus(comidas,postres){
+    const menus=[];
+    //for clásico
+   /* for(let f=0;f<comidas.length;f++){
+    for(let x=0;x<postres.length;x++){
+        menus.push(
+            {
+                comida:comidas[f],
+                postre:postres[x],
+            }
+        )
+    }
+
+   } */
+   // for of
+/*    for(let comida of comidas){
+    for(let postre of postres){
+        menus.push(
+            {
+                comida,
+                postre
+            }
+        )
+    }
+   } */
+   // forEach()
+   comidas.forEach(comida=>postres.forEach(postre=>menus.push({comida,postre})))
+   return menus;
+}
+const menus= generarMenus(comidas,postres);
+console.log(menus);
+
+//214
