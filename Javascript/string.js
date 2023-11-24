@@ -128,7 +128,7 @@ console.log(nuevoTexto);
 * Se tiene un array con elementos de tipo objeto donde se almacenan 10 frases celebres y sus autores.
 * Confeccionar una función que reciba el array y una palabra. Retornar un nuevo array con todas las frases que contienen dicha palabra
 */
-
+/* 
 const frasesCelebres=[
     { frase: 'La vida es 10% lo que te sucede y 90% como reaccionas a ello.', autor: 'Charles R. Swindoll' },
     { frase:` El amor es una fuerza mas formidable que cualquier otra. Es invisible, no puede ser visto ni medido, pero es lo suficientemente poderoso para transformarte
@@ -146,13 +146,15 @@ const frasesCelebres=[
 function frasesIncludes(frases,palabra){
     return frases.filter(buscar=>buscar.frase.includes(palabra));
     
-  /*   let nuevaFrase=[];
+     let nuevaFrase=[];
     for(let buscar of frases){
         if(buscar.frase.includes(palabra)){
             nuevaFrase.push(buscar.frase);
         }
-    } */
+    } 
     //return nuevaFrase;
 }
 const frasePalabra = frasesIncludes(frasesCelebres,'educación');
-console.log(frasePalabra);
+console.log(frasePalabra); */
+
+// 216
