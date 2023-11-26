@@ -43,5 +43,27 @@ document.querySelector('#chiste').innerHTML=chisteRandom();
 * Se tiene un <ul> con 4 elementos de tipo list item <li> cuyos contenidos son los valores del 1 al 4. Agregar el valor al castellano seguido al numero. 
 * Intentar resolverlo utilizando una estructura repetitiva.
 */
+/* const numCastellano=['Uno','Dos','Tres','Cuatro'];
+for(let f=1;f<=4;f++){
+    document.querySelector(`#item${f}`).textContent+=(` ${numCastellano[f-1]}`);
+} */
 
-
+/* 
+* Se tiene una lista desordenada <ul> con 3 valores numéricos cualquiera. Inmediatamente se carga la pagina, proceder a recuperar los tres contenidos de los <li> y verificar
+* cual es el mayor de los mismos.
+* Tener en cuenta que la propiedad 'TextContent siempre retorna un string
+*/
+/* const valor1=parseInt(document.querySelector('#item1').textContent);
+const valor2=parseInt(document.querySelector('#item2').textContent);
+const valor3=parseInt(document.querySelector('#item3').textContent);
+if(valor1 > valor2 && valor1> valor3){
+    document.querySelector('#mayor').textContent=valor1;
+} else{
+    if(valor2>valor3){
+        document.querySelector('#mayor').textContent=valor2;
+    }else{
+        document.querySelector('#mayor').textContent=valor3;
+    }
+} */
+const valores=[parseInt(document.querySelector('#item1').textContent),parseInt(document.querySelector('#item2').textContent),parseInt(document.querySelector('#item3').textContent)];
+document.querySelector('#mayor').innerHTML=Math.max(...valores);
