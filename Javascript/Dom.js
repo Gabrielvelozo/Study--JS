@@ -65,5 +65,20 @@ if(valor1 > valor2 && valor1> valor3){
         document.querySelector('#mayor').textContent=valor3;
     }
 } */
-const valores=[parseInt(document.querySelector('#item1').textContent),parseInt(document.querySelector('#item2').textContent),parseInt(document.querySelector('#item3').textContent)];
-document.querySelector('#mayor').innerHTML=Math.max(...valores);
+/* const valores=[parseInt(document.querySelector('#item1').textContent),parseInt(document.querySelector('#item2').textContent),parseInt(document.querySelector('#item3').textContent)];
+document.querySelector('#mayor').innerHTML=Math.max(...valores); */
+
+/* 
+* Mostrar una frase celebre en un párrafo. Disponer un elemento input que permita ingresar un texto. Cuando se presione un botón mostrar un párrafo si la palabra 
+* ingresada se encuentra contenida en la frase.
+*/
+
+document.querySelector('#boton1').addEventListener('click',()=>{
+  const frase= document.querySelector('#frase').textContent;
+  let palabra= document.querySelector('#editor1').value;
+  if(frase.includes(palabra)){
+    document.querySelector('#resultado').textContent= `La palabra '${palabra}' esta incluida en la frase celebre`;
+  } else{
+    document.querySelector('#resultado').textContent= `La palabra '${palabra}' no esta incluida en la frase!!`;
+  }
+})
