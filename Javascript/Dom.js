@@ -73,7 +73,7 @@ document.querySelector('#mayor').innerHTML=Math.max(...valores); */
 * ingresada se encuentra contenida en la frase.
 */
 
-document.querySelector('#boton1').addEventListener('click',()=>{
+/* document.querySelector('#boton1').addEventListener('click',()=>{
   const frase= document.querySelector('#frase').textContent;
   let palabra= document.querySelector('#editor1').value;
   if(frase.includes(palabra)){
@@ -81,4 +81,43 @@ document.querySelector('#boton1').addEventListener('click',()=>{
   } else{
     document.querySelector('#resultado').textContent= `La palabra '${palabra}' no esta incluida en la frase!!`;
   }
+}) */
+
+/* 
+* Se dispone un array con las calorías de distintas frutas: 
+* Solicitar en un formulario que el usuario ingrese el nombre de una fruta y luego muestre la cantidad de calorías de la misma o un mensaje que no se tiene dicha información.
+*/
+const frutas=[
+    {nombre:'manzana',calorias:52},
+    {nombre:'banana', calorias:89},
+    {nombre:'naranja',calorias:47},
+    {nombre:'uva',calorias:67},
+    {nombre:'kiwi',calorias:61},
+    {nombre:'pera',calorias:57},
+    {nombre:'mango',calorias:99},
+    {nombre:'piña',calorias:50},
+    {nombre:'sandia',calorias:30},
+    {nombre:'melon',calorias:34}
+];
+
+function verFrutas(frutas){
+    const nombreFrutas= frutas.map(fruta=>fruta.nombre);
+   document.querySelector('#nombre').textContent= nombreFrutas.join(' -  ');
+}
+verFrutas(frutas);
+
+
+document.querySelector('#calorias').addEventListener('click',()=>{
+    const nombreFruta= document.querySelector('#fruta').value;
+    const calorias= retornarCalorias(frutas);
 })
+
+function retornarCalorias(frutas){
+    for(let fruta of frutas){
+        if(fruta.nombre==){
+            document.querySelector('#detalle').textContent= `Las calorias de ${nombreFruta} son ${fruta.calorias}`;
+        }else{
+            document.querySelector('#detalle').textContent= `La fruta no tiene registro.`;
+        }
+    }
+}
