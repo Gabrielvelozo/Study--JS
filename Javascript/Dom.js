@@ -87,7 +87,7 @@ document.querySelector('#mayor').innerHTML=Math.max(...valores); */
 * Se dispone un array con las calorías de distintas frutas: 
 * Solicitar en un formulario que el usuario ingrese el nombre de una fruta y luego muestre la cantidad de calorías de la misma o un mensaje que no se tiene dicha información.
 */
-const frutas=[
+/* const frutas=[
     {nombre:'manzana',calorias:52},
     {nombre:'banana', calorias:89},
     {nombre:'naranja',calorias:47},
@@ -109,15 +109,48 @@ verFrutas(frutas);
 
 document.querySelector('#calorias').addEventListener('click',()=>{
     const nombreFruta= document.querySelector('#fruta').value;
-    const calorias= retornarCalorias(frutas);
+    const calorias= retornarCalorias(fruta);
+    if(calorias!=null){
+        document.querySelector('#detalle').textContent= `La cantidad de calorias de ${nombreFruta} es ${calorias}`;
+    }else{
+        document.querySelector('#detalle').textContent= `No tenemos registro de la fruta`;
+    }
 })
 
-function retornarCalorias(frutas){
-    for(let fruta of frutas){
-        if(fruta.nombre==){
-            document.querySelector('#detalle').textContent= `Las calorias de ${nombreFruta} son ${fruta.calorias}`;
-        }else{
-            document.querySelector('#detalle').textContent= `La fruta no tiene registro.`;
-        }
+function retornarCalorias(fruta){
+    const frutaBuscada= frutas.find(frutaActual=>frutaActual.nombre==fruta);
+    if(frutaBuscada!=null){
+        return frutaBuscada.calorias;
     }
+    return null;
+} // No esta terminado!!! */
+
+/* 
+* Se dispone un array con las calorias de distintas frutas. Crear un formulario con dos controles de tipo radio para permitir seleccionar las frutas con altas calorias
+* (>=50) o bajas calorias (<50). Al presionar un boton mostrar las frutas que pertenecen a dicha categoría.
+*/
+
+const frutas=[
+    {nombre:'manzana',calorias:52},
+    {nombre:'banana', calorias:89},
+    {nombre:'naranja',calorias:47},
+    {nombre:'uva',calorias:67},
+    {nombre:'kiwi',calorias:61},
+    {nombre:'pera',calorias:57},
+    {nombre:'mango',calorias:99},
+    {nombre:'piña',calorias:50},
+    {nombre:'sandia',calorias:30},
+    {nombre:'melon',calorias:34}
+];
+function frutasNombre(){
+    const nombresFrutas= frutas.map(fruta=>fruta.nombre);
+    document.querySelector('#nombre').textContent=nombresFrutas.join('-');
 }
+frutasNombre(frutas);
+
+document.querySelector('#validar').addEventListener('click',()=>{
+    if(document.querySelector('#altascalorias')){
+        const altas=frutas.filter(fruta=>fruta.calorias >=50);
+        document.querySelector('#resultado').textContent= `${altas.forEach(nombre=>nombre.nombre)}`
+        }
+    });
