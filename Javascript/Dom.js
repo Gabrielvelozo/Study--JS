@@ -130,7 +130,7 @@ function retornarCalorias(fruta){
 * (>=50) o bajas calorias (<50). Al presionar un boton mostrar las frutas que pertenecen a dicha categoría.
 */
 
-const frutas=[
+/* const frutas=[
     {nombre:'manzana',calorias:52},
     {nombre:'banana', calorias:89},
     {nombre:'naranja',calorias:47},
@@ -149,8 +149,14 @@ function frutasNombre(){
 frutasNombre(frutas);
 
 document.querySelector('#validar').addEventListener('click',()=>{
-    if(document.querySelector('#altascalorias')){
+    if(document.querySelector('#altascalorias').checked){
         const altas=frutas.filter(fruta=>fruta.calorias >=50);
-        document.querySelector('#resultado').textContent= `${altas.forEach(nombre=>nombre.nombre)}`
+        let mostrar=altas.map(fruta=> `${fruta.nombre} = ${fruta.calorias} `);
+        document.querySelector('#resultado').innerHTML=mostrar.join('<br>');
         }
-    });
+    if(document.querySelector('#bajascalorias').checked){
+        const bajas=frutas.filter(fruta=>fruta.calorias <50);
+        let mostrar=bajas.map(fruta=> `${fruta.nombre} = ${fruta.calorias} `);
+        document.querySelector('#resultado').innerHTML=mostrar.join('<br>');
+            }
+    }); */
