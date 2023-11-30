@@ -146,10 +146,21 @@ function frutasNombre(){
     const nombresFrutas= frutas.map(fruta=>fruta.nombre);
     document.querySelector('#nombre').textContent=nombresFrutas.join('-');
 }
-frutasNombre(frutas);
+ frutasNombre(frutas); 
 
 document.querySelector('#validar').addEventListener('click',()=>{
-    if(document.querySelector('#altascalorias').checked){
+    const altas=document.querySelector('#altascalorias');
+    const bajas=document.querySelector('#bajascalorias'); */
+    
+    /* // Métodos de Array = Filter() & Map()
+    const datosCalorias=frutas.filter( fruta => (
+        (altas.checked && fruta.calorias >=50) ||
+        (bajas.checked && fruta.calorias <50)))
+        .map(fruta=> `${fruta.nombre} = ${fruta.calorias}`);
+        document.querySelector('#resultado').innerHTML=datosCalorias.join('<br>') */
+    
+    // Estructura condicional if
+   /*  if(document.querySelector('#altascalorias').checked){
         const altas=frutas.filter(fruta=>fruta.calorias >=50);
         let mostrar=altas.map(fruta=> `${fruta.nombre} = ${fruta.calorias} `);
         document.querySelector('#resultado').innerHTML=mostrar.join('<br>');
@@ -158,5 +169,50 @@ document.querySelector('#validar').addEventListener('click',()=>{
         const bajas=frutas.filter(fruta=>fruta.calorias <50);
         let mostrar=bajas.map(fruta=> `${fruta.nombre} = ${fruta.calorias} `);
         document.querySelector('#resultado').innerHTML=mostrar.join('<br>');
-            }
-    }); */
+            } */
+    
+  /*   // For of
+    const datosCalorias=[];
+    for(fru of frutas){
+        if(altas.checked && fru.calorias >=50){
+            datosCalorias.push(`${fru.nombre} = ${fru.calorias}`);
+        }
+        if(bajas.checked && fru.calorias <50){
+            datosCalorias.push(`${fru.nombre} = ${fru.calorias}`);
+        }
+    }
+    document.querySelector('#resultado').innerHTML=datosCalorias.join('<br>'); 
+
+    });
+*/
+
+/* 
+* Mostrar 4 checkbox con materias de una carrera informática. Cuando se presione un boton validar que 
+* solo se hayan seleccionado un máximo de 2.
+*/
+
+document.querySelector('#verificar').addEventListener('click',()=>{
+    const sistema=document.querySelector('#sistemas');
+    const inteligencia=document.querySelector('#inteligencia');
+    const ciencia=document.querySelector('#ciencia');
+    const programar=document.querySelector('#programacion');
+    let contador=0;
+    if(sistema.checked){
+        contador++;
+    }
+    if(inteligencia.checked){
+        contador++;
+    }
+    if(ciencia.checked){
+        contador++;
+    }
+    if(programar.checked){
+        contador++;
+    }
+    if(contador>2){
+        document.querySelector('#dato').innerHTML=`Debe solo tildar dos opciones.`;
+    }else{
+        document.querySelector('#dato').innerHTML=`Selecciono un numero correcto.`
+    }
+    
+})
