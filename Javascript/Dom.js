@@ -191,7 +191,7 @@ document.querySelector('#validar').addEventListener('click',()=>{
 * solo se hayan seleccionado un máximo de 2.
 */
 
-document.querySelector('#verificar').addEventListener('click',()=>{
+/* document.querySelector('#verificar').addEventListener('click',()=>{
     const sistema=document.querySelector('#sistemas');
     const inteligencia=document.querySelector('#inteligencia');
     const ciencia=document.querySelector('#ciencia');
@@ -215,4 +215,18 @@ document.querySelector('#verificar').addEventListener('click',()=>{
         document.querySelector('#dato').innerHTML=`Selecciono un numero correcto.`
     }
     
-})
+}) */
+
+/* 
+* Mostrar en un control select una serie de emojis. Pedir al usuario que escriba en castellano que palabra
+* representa. Al presionar un boton informar si el dato ingresado es correcto o no.
+*/
+/* document.querySelector('#verificar').addEventListener('click', ()=>{
+    const palabra=document.querySelector('#palabra').value;
+    const seleccion=document.querySelector('#emojis').value;
+    if(palabra == seleccion){
+        document.querySelector('#texto').textContent=`Adivinaste la palabra.`;
+    }else{
+        document.querySelector('#texto').textContent=`La palabra correcta es ${seleccion.toUpperCase()}`;
+    }
+}) */
