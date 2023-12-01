@@ -230,3 +230,32 @@ document.querySelector('#validar').addEventListener('click',()=>{
         document.querySelector('#texto').textContent=`La palabra correcta es ${seleccion.toUpperCase()}`;
     }
 }) */
+
+/* 
+* Confeccionar un formulario que permita ingresar un comentario en un textarea.
+* Al presionar un boton mostrar un mensaje si el usuario ha ingresado alguna palabra censurada.
+* Las palabras censuradas se encuentran almacenadas en un array.
+*/
+/* const palabrasCensuradas=['inútil','tonto','bobo'];
+
+document.querySelector('#mostrar').addEventListener('click',()=>{
+    const comentario= document.querySelector('#comentario').value; //.split('opcional');
+    console.log(comentario);
+    let censura= false;
+    for(let censurada of palabrasCensuradas){
+        if(comentario.includes(censurada)){
+            censura= true;
+            break;
+        }
+    }
+    if(censura){
+        document.querySelector('#texto').textContent= `El texto ingresado contiene palabras ofensivas.`;
+    }else{
+        document.querySelector('#texto').textContent= `El texto ingresado no contiene palabras ofensivas.`;
+    }
+    
+}) */
+
+/* 
+* 
+*/
