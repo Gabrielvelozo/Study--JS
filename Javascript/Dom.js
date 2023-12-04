@@ -257,5 +257,31 @@ document.querySelector('#mostrar').addEventListener('click',()=>{
 }) */
 
 /* 
-* 
+* Confeccionar un formulario que solicite el ingreso de una clave de al menos 8 caracteres.
+* En un segundo control input de tipo password se debe repetir el ingreso de la clave.
+* Cuando se presione un boton validar que las dos claves sean iguales y tengan al menos 8 caracteres.
+* Agregar un segundo boton que al ser presionado se muestre un alert() con las dos claves visibles para
+* que el operador pueda corroborar los textos ingresados.
 */
+
+/* document.querySelector('#verificar').addEventListener('click',()=>{
+    const clave= document.querySelector('#clave').value;
+    const clave1= document.querySelector('#clave1').value;
+    if(clave != clave1){
+        document.querySelector('#resultado').textContent= `Las contraseñas son incorrectas.`;
+        return;
+    }
+    if(clave.length <8){
+        document.querySelector('#resultado').textContent= 'Debe cumplir con 8 caracteres como mínimo.';
+        return;
+    }
+    document.querySelector('#resultado').textContent= `Clave valida.`;
+})
+
+document.querySelector('#ver').addEventListener('click',()=>{
+    const clave= document.querySelector('#clave').value;
+    const clave1= document.querySelector('#clave1').value;
+    alert(`Primera: ${clave}\nSegunda: ${clave1}`);
+}) */
+
+// PRActica Linux!
