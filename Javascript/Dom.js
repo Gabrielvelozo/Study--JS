@@ -284,4 +284,6 @@ document.querySelector('#ver').addEventListener('click',()=>{
     alert(`Primera: ${clave}\nSegunda: ${clave1}`);
 }) */
 
-// PRActica Linux!
+
+
+

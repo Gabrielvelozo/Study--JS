@@ -25,5 +25,10 @@
         "velardez",
         "Velozo",
         "verclaves"
-    ]
+    ],
+    "editor.fontFamily": "'Comic  Mono', 'monospace', monospace",
+    "editor.cursorBlinking": "expand",
+    "editor.fontSize": 12,
+    "editor.guides.bracketPairs": "active",
+    "liveServer.settings.CustomBrowser": "chrome"
 }
