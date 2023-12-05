@@ -284,6 +284,30 @@ document.querySelector('#ver').addEventListener('click',()=>{
     alert(`Primera: ${clave}\nSegunda: ${clave1}`);
 }) */
 
+/* 
+* Se tiene una lista con 4 actividades. Algunas estan pendientes y otras completadas. Se las diferencia mediante 2 clases.
+* Cuando se presione un boton pasar a mostrar en un parrafo las tareas pendientes.
+* Crear el archivo CSS y modificar los siguientes estilos para cada una de las dos clases.
+*/
 
+/* document.querySelector('#mostrar').addEventListener('click',()=>{
+    const pendiente= document.querySelectorAll('.pendientes');
+    let listaPendiente= '';
+    pendiente.forEach(element=>listaPendiente+=element.textContent + '<br>');
+    document.querySelector('#resultado').innerHTML= listaPendiente;
+}) */
 
-
+/* 
+* Se dispone una poesia que utiliza una serie de emojis en lugar de sus palabras. 
+* Crear una hoja de estilo y definir el tamano de fuente de 24px para la clase de 'emojis'
+* Por otro lado definir un boton que al ser presionado remplace todos los emojis por la palabra que representa dicho emoji.
+* Se dispone un array asociado a cada palabra con su respectivo emojis: La pagina previo a presionar el boton se debe mostrar
+* con la siguiente interfaz visual
+*/
+const palabrasConEmojis=[
+    {emoji: '🌕', palabra:'luna'},
+    {emoji:'🌷', palabra:'flores'},
+    {emoji:'🍂', palabra:'hojas'},
+    {emoji:'🌊', palabra:'mar'},
+    {emoji:'✨', palabra:'estrella'}
+]

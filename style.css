@@ -1,0 +1,10 @@
+.completada{
+    text-decoration: line-through;
+    color: lightgray;
+}
+.pendientes{
+    color: green;
+}
+.emojis{
+    font-size: 2rem;
+}
