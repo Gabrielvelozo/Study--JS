@@ -332,3 +332,23 @@ document.querySelector('#resultado').addEventListener('click',()=>{
     figura.style.backgroundColor= document.querySelector('#color').value;
 }) */
 
+/* 
+* Se tiene una pagina con distintos elementos HTML. Al presionar un boton cambiar el color
+* de los textos de tipo 'P' y elementos de tipo 'LI'.
+* Resolverlo obteniendo la referencia de todos los elementos de la pagina y luego recorriendo el
+* NodeList identificando si se trata de un elemento 'P' o 'LI'
+*/
+
+/* document.querySelector('#cambiar').addEventListener('click',()=>{
+    //Ej - con selector universal.
+    const elementosHTML= document.querySelectorAll('*');
+    elementosHTML.forEach(elemento=>{
+        if(elemento.tagName== 'LI' || elemento.tagName == 'P'){
+            elemento.style.color= 'green';
+        }
+    }) 
+    // Ej- con selector de etiquetas.
+    document.querySelectorAll('li, p').forEach(elemento=>elemento.style.color='red');
+}) */
+
+//246
