@@ -285,8 +285,8 @@ document.querySelector('#ver').addEventListener('click',()=>{
 }) */
 
 /* 
-* Se tiene una lista con 4 actividades. Algunas estan pendientes y otras completadas. Se las diferencia mediante 2 clases.
-* Cuando se presione un boton pasar a mostrar en un parrafo las tareas pendientes.
+* Se tiene una lista con 4 actividades. Algunas están pendientes y otras completadas. Se las diferencia mediante 2 clases.
+* Cuando se presione un boton pasar a mostrar en un párrafo las tareas pendientes.
 * Crear el archivo CSS y modificar los siguientes estilos para cada una de las dos clases.
 */
 
@@ -298,16 +298,37 @@ document.querySelector('#ver').addEventListener('click',()=>{
 }) */
 
 /* 
-* Se dispone una poesia que utiliza una serie de emojis en lugar de sus palabras. 
-* Crear una hoja de estilo y definir el tamano de fuente de 24px para la clase de 'emojis'
+* Se dispone una poesía que utiliza una serie de emojis en lugar de sus palabras. 
+* Crear una hoja de estilo y definir el tamaño de fuente de 24px para la clase de 'emojis'
 * Por otro lado definir un boton que al ser presionado remplace todos los emojis por la palabra que representa dicho emoji.
 * Se dispone un array asociado a cada palabra con su respectivo emojis: La pagina previo a presionar el boton se debe mostrar
 * con la siguiente interfaz visual
 */
-const palabrasConEmojis=[
-    {emoji: '🌕', palabra:'luna'},
+/* const palabrasConEmojis=[
+    {emoji:'🌕', palabra:'luna'},
     {emoji:'🌷', palabra:'flores'},
     {emoji:'🍂', palabra:'hojas'},
     {emoji:'🌊', palabra:'mar'},
     {emoji:'✨', palabra:'estrella'}
 ]
+function retornarPalabra(sticker){
+    return palabrasConEmojis.find(elemento=>elemento.emoji==sticker).palabra;
+}
+
+document.querySelector('#resultado').addEventListener('click',()=>{
+    const sticker= document.querySelectorAll('.emojis');
+    sticker.forEach(elemento=>elemento.textContent= retornarPalabra(elemento.textContent));
+}) */
+
+/* 
+* Confeccionar un formulario que permita ingresar el ancho, alto y color de fondo que se debe aplicar a un elemento div.
+* Efectuar los cambios en el momento que se presiona un boton.
+*/
+
+/* document.querySelector('#actualizar').addEventListener('click',()=>{
+    const figura= document.querySelector('#recuadro');
+    figura.style.width= document.querySelector('#ancho').value + 'px';
+    figura.style.height= document.querySelector('#alto').value + 'px';
+    figura.style.backgroundColor= document.querySelector('#color').value;
+}) */
+
