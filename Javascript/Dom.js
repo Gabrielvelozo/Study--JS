@@ -351,4 +351,66 @@ document.querySelector('#resultado').addEventListener('click',()=>{
     document.querySelectorAll('li, p').forEach(elemento=>elemento.style.color='red');
 }) */
 
-//246
+/* 
+* Se dispone de una lista desordenada con cuatro 'li' y dentro un hipervínculo 'a'.
+* Definir 3 botones para agregar dos clases cada uno, de tal forma que se transforme en un menu de opciones horizontal.
+* Ya se tiene la hoja de estilos con las clases necesarias para dar formato al menu de opciones.s
+*/
+/* const menu= document.querySelector('#menuopciones');
+document.querySelector('#boton1').addEventListener('click',()=>{
+    menu.className='';
+    menu.classList.add('menu','menu-izquierda');
+})
+document.querySelector('#boton2').addEventListener('click',()=>{
+    menu.className='';
+    menu.classList.add('menu','menu-derecha');
+})
+document.querySelector('#boton3').addEventListener('click',()=>{
+    menu.className='';
+    menu.classList.add('menu','menu-espaciado');
+}) */
+
+/* 
+* Se tiene 4 imágenes en una subcarpeta llamada 'imágenes', los nombres son 'avatar1.png', 'avatar2.png',
+* 'avatar3.png' y 'avatar4.png'
+* Se puede comenzar mostrando la imagen 'avatar1.png'
+* Confeccionar una aplicación que permita mediante dos botones visualizar los 4 avatares.
+* Se debe actualizar el atributo estándar 'src' del elemento 'img'
+* Luego también programar para que cuando no haya mas avatares al presionar el boton 'siguiente' el mismo se deshabilite
+* La misma lógica para el boton 'anterior'.
+* Un boton se deshabilita asignando true al atributo 'disabled'
+*/
+/* 
+let seleccionar= 1;
+actualizarBoton();
+function mostrar(seleccionar){
+    document.querySelector('#imagen').src=`../imagenes/avatar${seleccionar}.png`;
+}
+document.querySelector('#anterior').addEventListener('click',()=>{
+    if(seleccionar>1){
+        seleccionar--;
+        mostrar(seleccionar);
+        actualizarBoton();
+    }
+})
+document.querySelector('#siguiente').addEventListener('click',()=>{
+    if(seleccionar<4){
+        seleccionar++;
+        mostrar(seleccionar);
+        actualizarBoton();
+    }
+})
+function actualizarBoton(){
+    if(seleccionar==1){
+        document.querySelector('#anterior').disabled=true;
+    }
+    if(seleccionar==2){
+        document.querySelector('#anterior').disabled=false;
+    }    
+    if(seleccionar==3){
+        document.querySelector('#siguiente').disabled=false;
+    }
+    if(seleccionar==4){
+        document.querySelector('#siguiente').disabled=true;
+    }
+} */
