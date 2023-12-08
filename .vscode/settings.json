@@ -27,9 +27,9 @@
         "Velozo",
         "verclaves"
     ],
-    "editor.fontFamily": "'Comic  Mono', 'monospace', monospace",
     "editor.cursorBlinking": "expand",
-    "editor.fontSize": 12,
+    "editor.fontSize": 16,
     "editor.guides.bracketPairs": "active",
-    "liveServer.settings.CustomBrowser": "chrome"
+    "liveServer.settings.CustomBrowser": "chrome",
+    "editor.fontFamily": "'Comic Mono', Consolas, 'Courier New', monospace"
 }
