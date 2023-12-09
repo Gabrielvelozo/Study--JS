@@ -380,7 +380,7 @@ document.querySelector('#boton3').addEventListener('click',()=>{
 * La misma lógica para el boton 'anterior'.
 * Un boton se deshabilita asignando true al atributo 'disabled'
 */
-/* 
+/*
 let seleccionar= 1;
 actualizarBoton();
 function mostrar(seleccionar){
@@ -414,3 +414,51 @@ function actualizarBoton(){
         document.querySelector('#siguiente').disabled=true;
     }
 } */
+
+/* 
+* Se tiene una pagina web, que tiene una serie de enances a distintos motores de búsqueda. Algunos tienen la propiedad target y otros no, aquellos que no lo tengan
+* agregar la propiedad targed con el valor _blank.
+*/
+
+/* const enlaces= document.querySelectorAll('a');
+enlaces.forEach(elemento=>{
+    if(!elemento.hasAttribute('target')){
+        // elemento.target= '_blank';   -- Notación punto . --
+        //elemento.setAttribute('target','_blank')  -- Con Método  --
+    }
+}) */
+
+
+/* 
+* Se dispone de una lista de actividades. Cada actividad tiene un atributo no estándar llamado 'data-estado' donde puede almacenar el valor 'completada' o 'pendiente'
+* Al presionar un boton mostrar la cantidad de actividades completadas consultando el atributo no estándar en un alert.
+* Resolverlo utilizando: 
+* 1. For of de la clase NodeList
+* 2. ForEach de la clase NodeList
+* 3. reduce() de  la clase Array.
+*/
+
+document.querySelector('#boton').addEventListener('click',()=>{
+    const datos= [...document.querySelectorAll('#actividades li')];
+    let cant= 0;
+    // For of
+   /*  for(let elemento of datos){
+        if(elemento.dataset.estado=='completada'){
+            //alert(elemento.textContent);
+            cant++
+        }
+    } */
+    
+    // ForEach()
+    /* datos.forEach(elemento=>{
+        if(elemento.dataset.estado=='completada'){
+            //alert(elemento.textContent);
+            cant++
+        }
+    }) */
+    
+    let cantidad= datos.reduce((acumulador, dato)=> dato.dataset.estado=='completada'?acumulador+1:acumulador,0);
+    alert(cantidad);
+})
+
+//254
