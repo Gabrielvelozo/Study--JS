@@ -438,27 +438,49 @@ enlaces.forEach(elemento=>{
 * 3. reduce() de  la clase Array.
 */
 
-document.querySelector('#boton').addEventListener('click',()=>{
+/* document.querySelector('#boton').addEventListener('click',()=>{
     const datos= [...document.querySelectorAll('#actividades li')];
     let cant= 0;
     // For of
-   /*  for(let elemento of datos){
+     for(let elemento of datos){
         if(elemento.dataset.estado=='completada'){
             //alert(elemento.textContent);
             cant++
         }
-    } */
+    } 
     
     // ForEach()
-    /* datos.forEach(elemento=>{
+    datos.forEach(elemento=>{
         if(elemento.dataset.estado=='completada'){
             //alert(elemento.textContent);
             cant++
         }
-    }) */
+    }) 
     
     let cantidad= datos.reduce((acumulador, dato)=> dato.dataset.estado=='completada'?acumulador+1:acumulador,0);
     alert(cantidad);
-})
+}) */
 
-//254
+/* 
+* Se dispone de una lista HTML, con valores numéricos. Agregar la clase 'negativo' a los elementos que tienen un valor negativo.
+* Obtener la referencia de la lista por su 'id' y posteriormente acceder a todos sus hijos.
+* Resolverlo: 
+* 1. Acceder a los hijos mediante la propiedad children.
+* 2. También resolverlo obteniendo la referencia del primer hijo y recorrerlo con un while obteniendo la referencia de los hermanos.
+*/
+
+/* const lista= document.querySelector('#listavalores');
+ for(let hijo of lista.children){
+    const valor= parseInt(hijo.textContent);
+    if(valor<0){
+        hijo.className='negativo';
+    }
+} 
+let hijo= lista.firstElementChild;
+while(hijo!=null){
+    const valor= parseInt(hijo.textContent);
+    if(valor<0){
+        hijo.className='negativo';
+    }
+    hijo=hijo.nextElementSibling;
+} */
