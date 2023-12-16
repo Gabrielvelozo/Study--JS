@@ -485,6 +485,31 @@ while(hijo!=null){
     hijo=hijo.nextElementSibling;
 } */
 
-const nombre= document.querySelector('#nombre');
+/* const nombre= document.querySelector('#nombre');
 const email= document.querySelector('#email');
 const clave= document.querySelector('#clave');
+const usuarios= document.querySelector('#usuarios');
+document.querySelector('#confirmar').addEventListener('click',()=>{
+    const filaTabla= document.createElement('tr');
+    filaTabla.innerHTML=`<td>${nombre.value}</td><td>${email.value}</td><td>${clave.value}</td>`
+    usuarios.append(filaTabla);
+}) */
+
+/* let random= Math.floor(Math.random()*100)+1;
+const numero= document.querySelector('#num');
+const resultado= document.querySelector('#resultados');
+console.log(random);
+document.querySelector('#validar').addEventListener('click',()=>{
+    const lista= document.createElement('li');
+    const numeroIngresado= parseInt(numero.value);
+    if(numeroIngresado==random){
+        lista.textContent=`El numero ingresado ${numeroIngresado} es el correcto, Felicidades!`;
+    }
+    if(random < numeroIngresado){
+        lista.textContent= `El numero que pense es menor a ${numeroIngresado}`;
+    }
+    if(random > numeroIngresado){
+        lista.textContent=`El numero que pense es mayor a ${numeroIngresado}`;
+    }
+    resultado.append(lista);
+}) */
