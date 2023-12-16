@@ -485,4 +485,6 @@ while(hijo!=null){
     hijo=hijo.nextElementSibling;
 } */
 
-// tres de dias de parate
+const nombre= document.querySelector('#nombre');
+const email= document.querySelector('#email');
+const clave= document.querySelector('#clave');

@@ -27,6 +27,22 @@
     justify-content: space-between;
 } */
 
-.negativo{
+/* .negativo{
     color: red;
+} */
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+th,td{
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #dddd;
+}
+th{
+    background-color: #af4c87;
+    color: white;
+    font-weight: bold;
 }
