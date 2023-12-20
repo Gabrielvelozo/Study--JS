@@ -513,3 +513,8 @@ document.querySelector('#validar').addEventListener('click',()=>{
     }
     resultado.append(lista);
 }) */
+
+const frases= document.querySelectorAll('#frases li');
+document.querySelector('#validar').addEventListener('click',()=>{
+
+})
