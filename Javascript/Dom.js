@@ -514,7 +514,28 @@ document.querySelector('#validar').addEventListener('click',()=>{
     resultado.append(lista);
 }) */
 
-const frases= document.querySelectorAll('#frases li');
-document.querySelector('#validar').addEventListener('click',()=>{
-
+/* document.querySelector('#validar').addEventListener('click',()=>{
+ const frases= document.querySelectorAll('#frases li');
+ frases.forEach(frase=>{
+    if(frase.textContent.toUpperCase().includes('GUERRA')){
+        frase.remove();
+    }
+ })
+}) */
+/* 
+* Disponer un control input de tipo number. Cuando se presione la tecla 'Enter' proceder a mostrar en un párrafo
+* los valores de 1 hasta el valor ingresado (no disponer un boton)
+* Para identificar si se presiono la tecla enter debemos preguntar por el atributo 'key' si almacena el string 'Enter'
+*/
+document.querySelector('#numero').addEventListener('keyup',evento=>{
+   if(evento.key=='Enter'){
+    mostrarHasta(parseInt(document.querySelector('#numero').value));
+   }
+   function mostrarHasta(num){
+    let mostrar= '';
+    for(let i=0;i<=num;i++){
+        mostrar+= i +' - '
+    }
+    document.querySelector('#ver').textContent=mostrar;
+   }
 })
