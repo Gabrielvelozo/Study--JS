@@ -527,7 +527,7 @@ document.querySelector('#validar').addEventListener('click',()=>{
 * los valores de 1 hasta el valor ingresado (no disponer un boton)
 * Para identificar si se presiono la tecla enter debemos preguntar por el atributo 'key' si almacena el string 'Enter'
 */
-document.querySelector('#numero').addEventListener('keyup',evento=>{
+/* document.querySelector('#numero').addEventListener('keyup',evento=>{
    if(evento.key=='Enter'){
     mostrarHasta(parseInt(document.querySelector('#numero').value));
    }
@@ -538,4 +538,14 @@ document.querySelector('#numero').addEventListener('keyup',evento=>{
     }
     document.querySelector('#ver').textContent=mostrar;
    }
-})
+}) */
+
+/* 
+* Disponer de un control textarea y en la parte inferior actualizar un párrafo que imprima la cantidad de caracteres
+* ingresados. Permitir ingresar solo 50 caracteres.
+ */
+/* const texto= document.querySelector('#texto');
+const ver= document.querySelector('#ver');
+texto.addEventListener('keydown',()=>{
+    ver.textContent= `Caracteres: ${texto.value.length}`;
+}) */
