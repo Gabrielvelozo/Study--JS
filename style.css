@@ -31,7 +31,7 @@
     color: red;
 } */
 
-table{
+/* table{
     border-collapse: collapse;
     width: 100%;
     margin-top: 10px;
@@ -45,4 +45,25 @@ th{
     background-color: #af4c87;
     color: white;
     font-weight: bold;
+} */
+
+#recuadros{
+    display: flex;
+    justify-content: space-evenly;
+} 
+.cuadrado{
+    width: 100px;
+    height: 100px;
+    margin: 3px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.rojo{
+    background-color: red;
+}
+.verde{
+    background-color: green;
+}
+.azul{
+    background-color: blue;
 }

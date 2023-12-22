@@ -549,3 +549,22 @@ const ver= document.querySelector('#ver');
 texto.addEventListener('keydown',()=>{
     ver.textContent= `Caracteres: ${texto.value.length}`;
 }) */
+
+/* 
+* Disponer tres cuadrados con los colores rojo, verde y azul, al igual al problema anterior.
+* Cuando hacemos doble click sobre el recuadro cambiamos el color de fondo de la pagina.
+*/
+/* const color= document.querySelectorAll('#recuadros div');
+color.forEach(recuadro =>{
+   recuadro.addEventListener('dblclick',evento=>{
+    document.body.classList.add(evento.target.dataset.color);
+   }) 
+   color.forEach(recuadro=>{
+    recuadro.addEventListener('mouseleave',evento=>{
+        document.body.classList.remove(evento.target.dataset.color);
+    })
+   })
+
+}) */
+
+//268
