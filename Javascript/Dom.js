@@ -567,4 +567,4 @@ color.forEach(recuadro =>{
 
 }) */
 
-//268
+//269
