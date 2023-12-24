@@ -564,7 +564,18 @@ color.forEach(recuadro =>{
         document.body.classList.remove(evento.target.dataset.color);
     })
    })
-
 }) */
 
-//269
+/*  
+* Confeccionar un formulario que solicite ingresar un signo del zodiaco, enviar dicho dato a un servidor que nos retorne
+* una pagina con características personales correspondientes a dicho signo al presionar un boton de tipo 'submit'.
+* Validar con Javascript que se ingrese efectivamente una cadena de caracteres antes de validar la petición al servidor
+*/
+
+document.querySelector('#formulario').addEventListener('submit', evento=>{
+    const signo= document.querySelector('#signo');
+    if(signo.value== ''){
+        alert('Completar campos');
+        evento.preventDefault();
+    }
+})
