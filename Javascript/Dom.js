@@ -572,10 +572,46 @@ color.forEach(recuadro =>{
 * Validar con Javascript que se ingrese efectivamente una cadena de caracteres antes de validar la petición al servidor
 */
 
-document.querySelector('#formulario').addEventListener('submit', evento=>{
+/* document.querySelector('#formulario').addEventListener('submit', evento=>{
     const signo= document.querySelector('#signo');
     if(signo.value== ''){
         alert('Completar campos');
         evento.preventDefault();
+    }
+}) */
+
+/*  // Utilizando querySelector para obtener elementos
+ const tamanioFuenteInput = document.querySelector('#tamanioFuente');
+ const miParrafo = document.querySelector('#miParrafo');
+
+ // Captura del evento change
+ tamanioFuenteInput.addEventListener('change', ()=> {
+   // Actualiza el tamaño de la fuente del párrafo
+   miParrafo.style.fontSize = tamanioFuenteInput.value + 'px';
+ });
+
+ // Captura del evento input
+ tamanioFuenteInput.addEventListener('input', ()=> {
+   // Actualiza el tamaño de la fuente del párrafo
+   miParrafo.style.fontSize = tamanioFuenteInput.value + 'px';
+ }); */
+
+ /* 
+ * Mostrar un numero de 1 dígito la primera vez, luego de 3 segundos ocultarlo y pedir al usuario que
+ * lo ingrese en un control input de tipo number. 
+ * Si ingresa en forma correcta ahora mostrar otro numero con un dígito mas.
+ * Finalizar la aplicación cuando el usuario se equivoca.
+ */
+const mostrar= document.querySelector('#mostrar');
+const numero= document.querySelector('#numero');
+let nRandom= Math.floor(Math.random()*9)+1;
+mostrar.textContent = `${nRandom}`
+const tiempo= setTimeout(()=>{
+    mostrar.style.visibility= `hidden`;
+},3000);
+document.querySelector('#confirmar').addEventListener('click',()=>{
+    let digito= 1;
+    if(numero.value== nRandom){
+        mostrar.style.visibility= `visible`;
     }
 })
