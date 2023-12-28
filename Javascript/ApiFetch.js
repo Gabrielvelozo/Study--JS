@@ -1,7 +1,7 @@
-fetch('https://www.scratchya.com.ar/cursojs/chistealazar.php')
+function chistes(){
+    fetch('https://www.scratchya.com.ar/cursojs/chistealazar.php')
     .then(respuesta => respuesta.json())
-    .then(chistes => contarChiste(chistes));
-    
-function contarChiste(chistes){
-    console.log(chistes);
-}
+    .then(chiste => document.querySelector('#ver').textContent=chiste.descripcion);
+}   
+chistes();
+setInterval(() => chistes(), 5000);
