@@ -31,7 +31,7 @@ document.querySelector('#generar').addEventListener('click',()=>{
 * transformar a un arreglo de Javascript.
 */
 
-const cadena = `[{"titulo": "Cien años de soledad", "autor": "Gabriel García Márquez",
+/* const cadena = `[{"titulo": "Cien años de soledad", "autor": "Gabriel García Márquez",
     "genero": "Realismo mágico", "añopublicacion": 1967},
     {"titulo": "1984", "autor": "George Orwell", "genero": "Ciencia ficción",
     "añopublicacion": 1949},
@@ -43,5 +43,5 @@ const cadena = `[{"titulo": "Cien años de soledad", "autor": "Gabriel García M
 
 const cadenaArreglo= JSON.parse(cadena);
 const libros= cadenaArreglo.map(elemento => `<tr><td>${elemento.titulo}</td> <td>${elemento.autor}</td> <td>${elemento.genero}</td> <td>${elemento.añopublicacion}</td> </tr>`)
-document.querySelector('#tabla').innerHTML= libros.join('');
+document.querySelector('#tabla').innerHTML= libros.join(''); */
 
