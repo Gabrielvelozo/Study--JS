@@ -109,7 +109,7 @@ function retornarJSON(){
     const listaClaves= arregloClaves.map(clave=>clave.textContent);
     return JSON.stringify(listaClaves);   
 } */
-const formulario= document.querySelector('#form');
+/* const formulario= document.querySelector('#form');
 
 formulario.addEventListener('submit', evento =>{
     evento.preventDefault();
@@ -125,4 +125,4 @@ formulario.addEventListener('submit', evento =>{
         img.src=urlObjeto
         document.querySelector('#resultado').appendChild(img)
     })
-})
+}) */
