@@ -126,3 +126,20 @@ formulario.addEventListener('submit', evento =>{
         document.querySelector('#resultado').appendChild(img)
     })
 }) */
+
+/* 
+* Confeccionar un validador de formato JSON, similar al sitio web: https://jsonlint.com
+*/
+
+const json= document.querySelector('#json');
+const resultado= document.querySelector('#resultado');
+
+document.querySelector('#validar').addEventListener('click',()=>{
+    try {
+        const objetoJSon= JSON.parse(json.value);
+        document.querySelector('#resultado').textContent= `JSON valido`;
+    } catch (error) {
+        document.querySelector('#resultado').textContent=`JSON invalido`;
+    }
+})
+
