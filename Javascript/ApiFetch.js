@@ -142,4 +142,4 @@ document.querySelector('#validar').addEventListener('click',()=>{
         document.querySelector('#resultado').textContent=`JSON invalido`;
     }
 })
-
+//302
