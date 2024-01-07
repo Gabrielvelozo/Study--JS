@@ -12,3 +12,4 @@ git merge // combinar ramas.
 ** git remote add origin "RAMA" // Conectar al repositorio remoto.
 5) git push -u origin "RAMA" // Subir los archivos al repositorio remoto.
 git pull // Para traer cualquier modificación del repositorio remoto. (Error // git branch -u origin/master )
+
